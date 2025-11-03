@@ -1,12 +1,12 @@
 {
   "name": "solanke-themes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Beautiful, professional color themes with Luxury Green and Corporate Blue palettes. Perfect for portfolios, landing pages, and web applications.",
   "main": "solanke-themes.css",
   "style": "solanke-themes.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/saurabhsolanke/solanke-themes.git"
+    "url": "https://github.com/saurabhsolanke/spectraCSS.git"
   },
   "keywords": [
     "css",
@@ -26,17 +26,18 @@
   ],
   "author": {
     "name": "Saurabh Solanke",
-    "url": "https://github.com/saurabhsolanke"
+    "url": "https://www.saurabhsolanke.com"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/saurabhsolanke/solanke-themes/issues"
+    "url": "https://github.com/saurabhsolanke/spectraCSS/issues"
   },
-  "homepage": "https://github.com/saurabhsolanke/solanke-themes#readme",
+  "homepage": "https://github.com/saurabhsolanke/spectraCSS#readme",
   "files": [
     "solanke-themes.css",
-    "README-THEME-LIBRARY.md",
-    "demo.html"
+    "README.md",
+    "demo.html",
+    "LICENSE"
   ]
 }
 
