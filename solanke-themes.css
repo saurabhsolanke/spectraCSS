@@ -4049,12 +4049,30 @@ main h2 {
   color: var(--theme-cream);
 }
 
-/* Card Grid Layout */
+/* Card Flex Layout */
 main > div:first-of-type {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
   margin-bottom: 4rem;
+}
+
+main > div:first-of-type > .card {
+  flex: 1 1 320px;
+  max-width: calc(33.333% - 1rem);
+}
+
+@media (max-width: 1200px) {
+  main > div:first-of-type > .card {
+    max-width: calc(50% - 0.75rem);
+  }
+}
+
+@media (max-width: 768px) {
+  main > div:first-of-type > .card {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
 }
 
 /* Responsive Sidebar */
