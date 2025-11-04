@@ -1,6 +1,6 @@
 /*!
  * Solanke Themes - Professional Color Themes Library
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Saurabh Solanke
  * License: MIT
  * Description: A complete CSS framework with Luxury Green and Corporate Blue themes
@@ -216,6 +216,142 @@ body[data-theme-enabled].dark {
    Button Styles
    ======================================== */
 
+/* Base Button */
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Button Primary */
+.btn-primary {
+  background: linear-gradient(135deg, var(--theme-dark) 0%, var(--theme-sage) 100%);
+  color: var(--theme-cream);
+  border: none;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 10px 20px color-mix(in srgb, var(--theme-sage) 30%, transparent);
+}
+
+/* Button Secondary */
+.btn-secondary {
+  background-color: color-mix(in srgb, var(--theme-cream) 60%, transparent);
+  color: var(--theme-darkest);
+  border: 1px solid color-mix(in srgb, var(--theme-mint) 30%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+  background-color: var(--theme-cream);
+}
+
+.dark .btn-secondary {
+  background-color: color-mix(in srgb, var(--theme-dark) 60%, transparent);
+  color: var(--theme-cream);
+  border-color: color-mix(in srgb, var(--theme-sage) 30%, transparent);
+}
+
+.dark .btn-secondary:hover {
+  background-color: color-mix(in srgb, var(--theme-dark) 80%, transparent);
+}
+
+/* Button Success */
+.btn-success {
+  background-color: var(--theme-sage);
+  color: var(--theme-cream);
+  border: none;
+}
+
+.btn-success:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 10px 20px color-mix(in srgb, var(--theme-sage) 30%, transparent);
+}
+
+/* Button Danger */
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  box-shadow: 0 10px 20px rgba(220, 53, 69, 0.3);
+}
+
+/* Button Warning */
+.btn-warning {
+  background-color: var(--theme-accent);
+  color: white;
+  border: none;
+}
+
+.btn-warning:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 10px 20px color-mix(in srgb, var(--theme-accent) 30%, transparent);
+}
+
+/* Button Info */
+.btn-info {
+  background-color: var(--theme-mint);
+  color: var(--theme-darkest);
+  border: none;
+}
+
+.btn-info:hover {
+  filter: brightness(0.95);
+  box-shadow: 0 10px 20px color-mix(in srgb, var(--theme-mint) 30%, transparent);
+}
+
+/* Button Light */
+.btn-light {
+  background-color: var(--theme-cream);
+  color: var(--theme-darkest);
+  border: 1px solid color-mix(in srgb, var(--theme-mint) 20%, transparent);
+}
+
+.btn-light:hover {
+  background-color: var(--theme-mint);
+}
+
+/* Button Dark */
+.btn-dark {
+  background-color: var(--theme-darkest);
+  color: var(--theme-cream);
+  border: none;
+}
+
+.btn-dark:hover {
+  background-color: var(--theme-dark);
+}
+
+/* Legacy Theme Buttons */
 .btn-theme-primary {
   background: linear-gradient(135deg, var(--theme-dark) 0%, var(--theme-sage) 100%);
   color: var(--theme-cream);
@@ -294,6 +430,31 @@ body[data-theme-enabled].dark {
   box-shadow: 0 12px 40px 0 color-mix(in srgb, var(--theme-sage) 25%, transparent);
 }
 
+/* Alias: .card for compatibility */
+.card {
+  background-color: color-mix(in srgb, var(--theme-cream) 60%, transparent);
+  backdrop-filter: blur(20px);
+  border: 1px solid color-mix(in srgb, var(--theme-mint) 30%, transparent);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px 0 color-mix(in srgb, var(--theme-sage) 15%, transparent);
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+}
+
+.dark .card {
+  background-color: color-mix(in srgb, var(--theme-dark) 40%, transparent);
+  border-color: color-mix(in srgb, var(--theme-sage) 30%, transparent);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px 0 color-mix(in srgb, var(--theme-sage) 25%, transparent);
+}
+
 /* Card Sections */
 .card-header {
   padding: 1rem 1.5rem;
@@ -305,9 +466,25 @@ body[data-theme-enabled].dark {
   color: var(--theme-darkest);
 }
 
+.card-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
 .card-body {
   flex: 1 1 auto;
   padding: 0;
+}
+
+.card-body p {
+  margin: 0.5rem 0;
+  color: var(--theme-dark);
+}
+
+.card-body strong {
+  font-weight: 600;
+  color: var(--theme-darkest);
 }
 
 .card-footer {
@@ -321,6 +498,19 @@ body[data-theme-enabled].dark {
 .dark .card-header,
 .dark .card-footer {
   background-color: color-mix(in srgb, var(--theme-darkest) 40%, transparent);
+  color: var(--theme-cream);
+}
+
+.dark .card-header h3 {
+  color: var(--theme-cream);
+}
+
+.dark .card-body p {
+  color: var(--theme-cream);
+  opacity: 0.9;
+}
+
+.dark .card-body strong {
   color: var(--theme-cream);
 }
 
@@ -2219,6 +2409,10 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
   gap: 0.5rem;
 }
 
+.nav-item {
+  display: list-item;
+}
+
 .navbar-nav .nav-link {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
@@ -3665,7 +3859,9 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 
 .list-group-item {
   position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 0.75rem 1.25rem;
   color: var(--theme-darkest);
   text-decoration: none;
@@ -3673,6 +3869,28 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
   border: 1px solid color-mix(in srgb, var(--theme-mint) 30%, transparent);
   border-bottom: none;
   transition: all 0.3s ease;
+  gap: 1rem;
+}
+
+.list-group-item > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+}
+
+.list-group-item h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.list-group-item p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--theme-dark);
+  opacity: 0.9;
 }
 
 .list-group-item:first-child {
@@ -3710,6 +3928,11 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
   border-color: color-mix(in srgb, var(--theme-sage) 30%, transparent);
 }
 
+.dark .list-group-item p {
+  color: var(--theme-cream);
+  opacity: 0.8;
+}
+
 /* List Group Flush */
 .list-group-flush .list-group-item {
   border-width: 0 0 1px;
@@ -3719,6 +3942,154 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 
 .list-group-flush .list-group-item:last-child {
   border-bottom-width: 0;
+}
+
+/* ========================================
+   Sidebar Component
+   ======================================== */
+
+.sidebar {
+  width: 280px;
+  min-height: 100vh;
+  padding: 2rem 1.5rem;
+  background-color: color-mix(in srgb, var(--theme-cream) 70%, transparent);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-right: 1px solid color-mix(in srgb, var(--theme-mint) 30%, transparent);
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--theme-darkest);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid color-mix(in srgb, var(--theme-sage) 30%, transparent);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar ul li a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--theme-dark);
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.sidebar ul li a:hover {
+  background-color: color-mix(in srgb, var(--theme-sage) 15%, transparent);
+  color: var(--theme-darkest);
+  transform: translateX(5px);
+}
+
+.sidebar ul li a.active {
+  background-color: var(--theme-sage);
+  color: var(--theme-cream);
+}
+
+.dark .sidebar {
+  background-color: color-mix(in srgb, var(--theme-darkest) 90%, transparent);
+  border-right-color: color-mix(in srgb, var(--theme-sage) 30%, transparent);
+}
+
+.dark .sidebar h2 {
+  color: var(--theme-cream);
+}
+
+.dark .sidebar ul li a {
+  color: var(--theme-cream);
+}
+
+.dark .sidebar ul li a:hover {
+  background-color: color-mix(in srgb, var(--theme-sage) 20%, transparent);
+  color: var(--theme-cream);
+}
+
+/* Main Content with Sidebar Layout */
+main {
+  margin-left: 280px;
+  padding: 2rem;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+main h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--theme-darkest);
+  margin-bottom: 2rem;
+}
+
+main h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--theme-darkest);
+  margin: 3rem 0 1.5rem 0;
+}
+
+.dark main h1,
+.dark main h2 {
+  color: var(--theme-cream);
+}
+
+/* Card Grid Layout */
+main > div:first-of-type {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+/* Responsive Sidebar */
+@media (max-width: 992px) {
+  .sidebar {
+    transform: translateX(-100%);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar.show {
+    transform: translateX(0);
+  }
+  
+  main {
+    margin-left: 0;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+  }
+  
+  main {
+    padding: 1rem;
+  }
+  
+  main h1 {
+    font-size: 2rem;
+  }
+  
+  main > div:first-of-type {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ========================================
