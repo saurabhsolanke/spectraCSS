@@ -2407,6 +2407,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
   margin-bottom: 0;
   list-style: none;
   gap: 0.5rem;
+  align-items: center;
 }
 
 .nav-item {
@@ -2424,26 +2425,87 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
   font-size: 1.25rem;
   line-height: 1;
   background-color: transparent;
-  border: 1px solid color-mix(in srgb, var(--theme-mint) 30%, transparent);
+  border: 2px solid color-mix(in srgb, var(--theme-sage) 50%, transparent);
   border-radius: 0.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
   display: none;
+  position: relative;
+  width: 45px;
+  height: 45px;
 }
 
 .navbar-toggler:hover {
-  background-color: color-mix(in srgb, var(--theme-sage) 10%, transparent);
+  background-color: color-mix(in srgb, var(--theme-sage) 15%, transparent);
+  border-color: var(--theme-sage);
 }
 
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--theme-sage) 20%, transparent);
+}
+
+/* Hamburger Icon */
 .navbar-toggler-icon {
-  display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
-  vertical-align: middle;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(107, 143, 113, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--theme-sage);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--theme-sage);
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+  top: -8px;
+}
+
+.navbar-toggler-icon::after {
+  bottom: -8px;
+}
+
+/* Animated Hamburger (when open) */
+.navbar-toggler.active .navbar-toggler-icon {
+  background-color: transparent;
+}
+
+.navbar-toggler.active .navbar-toggler-icon::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.navbar-toggler.active .navbar-toggler-icon::after {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+
+/* Dark mode toggler */
+.dark .navbar-toggler {
+  border-color: color-mix(in srgb, var(--theme-mint) 50%, transparent);
+}
+
+.dark .navbar-toggler:hover {
+  border-color: var(--theme-mint);
+}
+
+.dark .navbar-toggler-icon,
+.dark .navbar-toggler-icon::before,
+.dark .navbar-toggler-icon::after {
+  background-color: var(--theme-mint);
 }
 
 /* Navbar Collapse */
@@ -2451,38 +2513,64 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
   flex-basis: 100%;
   flex-grow: 1;
   align-items: center;
+  transition: all 0.3s ease;
 }
 
-.navbar-collapse.collapse {
-  display: flex !important;
+/* Desktop: Always show */
+@media (min-width: 769px) {
+  .navbar-collapse {
+    display: flex !important;
+    justify-content: flex-end;
+  }
 }
 
-.navbar-collapse.collapse.show {
-  display: flex !important;
-}
-
-@media (max-width: 992px) {
+/* Mobile: Toggle functionality */
+@media (max-width: 768px) {
   .navbar-toggler {
     display: block;
   }
   
   .navbar-collapse {
     display: none;
+    width: 100%;
   }
   
   .navbar-collapse.show {
-    display: flex;
-    flex-basis: 100%;
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 1rem;
+    animation: slideDown 0.3s ease-out;
   }
   
   .navbar-nav {
     flex-direction: column;
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 0;
+    gap: 0;
   }
   
   .navbar-nav .nav-link {
     padding: 0.75rem 1rem;
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+  
+  .navbar-nav .nav-item {
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+}
+
+/* Slide Down Animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
