@@ -1,28 +1,30 @@
 /*!
  * Solanke Themes - Professional Color Themes Library
- * Version: 1.0.1
+ * Version: 1.1.0
  * Author: Saurabh Solanke
  * License: MIT
- * Description: A complete CSS framework with Luxury Green and Corporate Blue themes
+ * Description: A complete CSS framework with Luxury Green, Corporate Blue, and Shadcn-inspired themes
  * 
  * Features:
- * - Two professional color themes
+ * - Three professional color themes (Luxury Green, Corporate Blue, Shadcn Dark)
  * - Dark mode support
- * - Complete layout system
+ * - Complete layout system with sidebar & navbar
+ * - Bootstrap-inspired components
  * - Typography utilities
  * - Rich animations
  * - Form components
- * - Navigation components
+ * - Responsive mobile menu
+ * - Cards, Lists, Accordions
  * - No dependencies required
  * 
  * Usage:
  * 1. Include this CSS file in your project
- * 2. Add data-color-theme="luxury" or data-color-theme="corporate" to your <html> tag
+ * 2. Add data-color-theme="luxury" or "corporate" or "shadcn" to your <html> tag
  * 3. Add class="dark" to <html> for dark mode
  * 4. Add data-theme-enabled to <body> tag
  * 5. Use utility classes throughout your project
  * 
- * CDN: https://cdn.jsdelivr.net/gh/[your-github-username]/[repo-name]@main/public/themes/solanke-themes.css
+ * CDN: https://cdn.jsdelivr.net/npm/solanke-themes@latest/solanke-themes.css
  */
 
 /* ========================================
@@ -57,6 +59,26 @@
   --theme-mint: #D5D8DC;     /* Cloud gray */
   --theme-cream: #F8F9FA;    /* Light gray */
   --theme-accent: #F1C40F;   /* Gold accent */
+}
+
+/* Shadcn Dark Theme - Modern Black & White */
+:root[data-color-theme="shadcn"] {
+  --theme-darkest: #0a0a0a;  /* Almost black */
+  --theme-dark: #171717;     /* Dark gray (neutral-900) */
+  --theme-sage: #525252;     /* Medium gray (neutral-600) */
+  --theme-mint: #a3a3a3;     /* Light gray (neutral-400) */
+  --theme-cream: #fafafa;    /* Off white (neutral-50) */
+  --theme-accent: #f5f5f5;   /* White accent (neutral-100) */
+}
+
+/* Shadcn Dark Mode Enhancement */
+:root[data-color-theme="shadcn"].dark {
+  --theme-darkest: #0a0a0a;  /* Pure black background */
+  --theme-dark: #171717;     /* Card/surface color */
+  --theme-sage: #737373;     /* Muted text (neutral-500) */
+  --theme-mint: #d4d4d4;     /* Secondary text (neutral-300) */
+  --theme-cream: #fafafa;    /* Primary text */
+  --theme-accent: #ffffff;   /* Accent white */
 }
 
 /* ========================================
@@ -3769,6 +3791,203 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 }
 
 /* ========================================
+   Shadcn Theme Specific Styles
+   ======================================== */
+
+/* Shadcn Light Mode */
+:root[data-color-theme="shadcn"] body[data-theme-enabled] {
+  background-color: #ffffff;
+  color: var(--theme-darkest);
+}
+
+:root[data-color-theme="shadcn"] .card,
+:root[data-color-theme="shadcn"] .card-theme {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  backdrop-filter: none;
+}
+
+:root[data-color-theme="shadcn"] .card-header {
+  background-color: transparent;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+:root[data-color-theme="shadcn"] .card-footer {
+  background-color: transparent;
+  border-top: 1px solid #e5e5e5;
+}
+
+:root[data-color-theme="shadcn"] .btn-primary {
+  background: #0a0a0a;
+  color: #fafafa;
+}
+
+:root[data-color-theme="shadcn"] .btn-primary:hover {
+  background: #171717;
+  box-shadow: none;
+}
+
+:root[data-color-theme="shadcn"] .btn-secondary {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  color: #0a0a0a;
+}
+
+:root[data-color-theme="shadcn"] .btn-secondary:hover {
+  background-color: #fafafa;
+  border-color: #d4d4d4;
+}
+
+:root[data-color-theme="shadcn"] .navbar-glass {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid #e5e5e5;
+  backdrop-filter: blur(8px);
+}
+
+:root[data-color-theme="shadcn"] .sidebar {
+  background-color: #fafafa;
+  border-right: 1px solid #e5e5e5;
+}
+
+:root[data-color-theme="shadcn"] .list-group-item {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-bottom: none;
+}
+
+/* Shadcn Dark Mode */
+:root[data-color-theme="shadcn"].dark body[data-theme-enabled] {
+  background-color: #0a0a0a;
+  color: #fafafa;
+}
+
+:root[data-color-theme="shadcn"].dark .card,
+:root[data-color-theme="shadcn"].dark .card-theme {
+  background-color: #0a0a0a;
+  border: 1px solid #262626;
+  box-shadow: none;
+}
+
+:root[data-color-theme="shadcn"].dark .card:hover {
+  border-color: #404040;
+  box-shadow: none;
+  transform: translateY(-2px);
+}
+
+:root[data-color-theme="shadcn"].dark .card-header {
+  background-color: transparent;
+  border-bottom: 1px solid #262626;
+  color: #fafafa;
+}
+
+:root[data-color-theme="shadcn"].dark .card-footer {
+  background-color: transparent;
+  border-top: 1px solid #262626;
+}
+
+:root[data-color-theme="shadcn"].dark .btn-primary {
+  background: #fafafa;
+  color: #0a0a0a;
+}
+
+:root[data-color-theme="shadcn"].dark .btn-primary:hover {
+  background: #e5e5e5;
+  box-shadow: none;
+}
+
+:root[data-color-theme="shadcn"].dark .btn-secondary {
+  background-color: #171717;
+  border: 1px solid #262626;
+  color: #fafafa;
+}
+
+:root[data-color-theme="shadcn"].dark .btn-secondary:hover {
+  background-color: #262626;
+  border-color: #404040;
+}
+
+:root[data-color-theme="shadcn"].dark .navbar-glass {
+  background-color: rgba(10, 10, 10, 0.8);
+  border-bottom: 1px solid #262626;
+  backdrop-filter: blur(8px);
+}
+
+:root[data-color-theme="shadcn"].dark .sidebar {
+  background-color: #0a0a0a;
+  border-right: 1px solid #262626;
+}
+
+:root[data-color-theme="shadcn"].dark .list-group-item {
+  background-color: #0a0a0a;
+  border: 1px solid #262626;
+  border-bottom: none;
+}
+
+:root[data-color-theme="shadcn"].dark .list-group-item:hover {
+  background-color: #171717;
+}
+
+:root[data-color-theme="shadcn"].dark .input-theme,
+:root[data-color-theme="shadcn"].dark .textarea-theme,
+:root[data-color-theme="shadcn"].dark .select-theme {
+  background-color: #0a0a0a;
+  border: 1px solid #262626;
+  color: #fafafa;
+}
+
+:root[data-color-theme="shadcn"].dark .input-theme:focus,
+:root[data-color-theme="shadcn"].dark .textarea-theme:focus,
+:root[data-color-theme="shadcn"].dark .select-theme:focus {
+  border-color: #fafafa;
+  box-shadow: 0 0 0 1px #fafafa;
+}
+
+:root[data-color-theme="shadcn"].dark .navbar-brand {
+  color: #fafafa;
+}
+
+:root[data-color-theme="shadcn"].dark .nav-link {
+  color: #a3a3a3;
+}
+
+:root[data-color-theme="shadcn"].dark .nav-link:hover {
+  color: #fafafa;
+  background-color: #171717;
+}
+
+:root[data-color-theme="shadcn"].dark .nav-link.active {
+  color: #fafafa;
+  background-color: #171717;
+}
+
+:root[data-color-theme="shadcn"].dark .accordion-item {
+  background-color: #0a0a0a;
+  border: 1px solid #262626;
+}
+
+:root[data-color-theme="shadcn"].dark .accordion-button {
+  color: #fafafa;
+  background-color: transparent;
+}
+
+:root[data-color-theme="shadcn"].dark .accordion-button:not(.collapsed) {
+  background-color: #171717;
+  color: #fafafa;
+}
+
+/* Remove glass effects for shadcn theme */
+:root[data-color-theme="shadcn"] .glass-theme {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+:root[data-color-theme="shadcn"].dark .glass-theme {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+/* ========================================
    Dark Mode Enhancements
    ======================================== */
 
@@ -4379,7 +4598,158 @@ main > div:first-of-type > .card {
 }
 
 /* ========================================
-   END OF SOLANKE THEMES v1.0.1
+   DOCUMENTATION PAGE COMPONENTS
    ======================================== */
 
-/* Thank you for using Solanke Themes! */
+/* Documentation Navbar */
+.docs-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: color-mix(in srgb, var(--theme-cream) 90%, transparent);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid color-mix(in srgb, var(--theme-mint) 30%, transparent);
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  z-index: 100;
+}
+
+.dark .docs-navbar {
+  background-color: color-mix(in srgb, var(--theme-darkest) 90%, transparent);
+}
+
+/* Documentation Sidebar */
+.docs-sidebar {
+  position: fixed;
+  left: 0;
+  top: 60px;
+  width: 250px;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  background-color: var(--theme-cream);
+  border-right: 1px solid color-mix(in srgb, var(--theme-mint) 30%, transparent);
+  padding: 2rem 0;
+  z-index: 50;
+}
+
+.dark .docs-sidebar {
+  background-color: var(--theme-darkest);
+}
+
+.docs-sidebar a {
+  display: block;
+  padding: 0.5rem 1.5rem;
+  color: var(--theme-dark);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.docs-sidebar a:hover {
+  background-color: color-mix(in srgb, var(--theme-sage) 10%, transparent);
+  color: var(--theme-darkest);
+}
+
+.docs-sidebar a.active {
+  background-color: var(--theme-sage);
+  color: var(--theme-cream);
+  font-weight: 600;
+}
+
+.docs-sidebar .sidebar-section {
+  margin-bottom: 1.5rem;
+}
+
+.docs-sidebar .sidebar-title {
+  padding: 0.5rem 1.5rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--theme-sage);
+}
+
+/* Documentation Main Content */
+.docs-main {
+  margin-left: 250px;
+  padding: 2rem 3rem;
+  max-width: 1400px;
+}
+
+.docs-main-content {
+  padding-top: 80px;
+}
+
+.docs-navbar-brand {
+  text-decoration: none;
+}
+
+.docs-navbar-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Documentation Class Card */
+.class-card {
+  background: color-mix(in srgb, var(--theme-cream) 60%, transparent);
+  border: 1px solid color-mix(in srgb, var(--theme-mint) 30%, transparent);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.class-card:hover {
+  border-color: var(--theme-sage);
+  transform: translateX(4px);
+}
+
+.class-name {
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 0.875rem;
+  color: var(--theme-sage);
+  font-weight: 600;
+}
+
+.class-desc {
+  font-size: 0.8125rem;
+  color: var(--theme-dark);
+  margin: 0.25rem 0 0 0;
+}
+
+.example-box {
+  border: 2px dashed color-mix(in srgb, var(--theme-mint) 40%, transparent);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Responsive Documentation Layout */
+@media (max-width: 992px) {
+  .docs-sidebar {
+    transform: translateX(-100%);
+  }
+  
+  .docs-main {
+    margin-left: 0;
+    padding: 2rem 1rem;
+  }
+}
+
+/* ========================================
+   END OF SOLANKE THEMES v1.1.0
+   ======================================== */
+
+/* Thank you for using Solanke Themes! 
+ * 
+ * Three Beautiful Themes:
+ * - Luxury Green: Natural, elegant design
+ * - Corporate Blue: Professional, business-ready
+ * - Shadcn Dark: Modern, minimal black & white
+ * 
+ * Built with ❤️ by Saurabh Solanke
+ */

@@ -1,0 +1,1674 @@
+<!DOCTYPE html>
+<html lang="en" data-color-theme="luxury">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Class Reference - Solanke Themes</title>
+  <link rel="stylesheet" href="solanke-themes.css">
+</head>
+<body data-theme-enabled>
+  
+  <!-- Top Navbar -->
+  <nav class="docs-navbar">
+    <a href="index.html" class="text-gradient-theme font-bold text-xl docs-navbar-brand">← Solanke Themes</a>
+    <div class="docs-navbar-actions">
+      <button onclick="switchTheme('luxury')" class="btn-sm btn-secondary">🌿 Luxury</button>
+      <button onclick="switchTheme('corporate')" class="btn-sm btn-secondary">💼 Corporate</button>
+      <button onclick="switchTheme('shadcn')" class="btn-sm btn-secondary">🖤 Shadcn</button>
+      <button onclick="toggleDark()" class="btn-sm btn-primary">🌙</button>
+    </div>
+  </nav>
+  
+  <!-- Sidebar Navigation -->
+  <aside class="docs-sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-title">Getting Started</div>
+      <a href="#installation">Installation</a>
+      <a href="#themes">Themes</a>
+    </div>
+    
+    <div class="sidebar-section">
+      <div class="sidebar-title">Colors</div>
+      <a href="#backgrounds">Backgrounds</a>
+      <a href="#text-colors">Text Colors</a>
+      <a href="#borders">Border Colors</a>
+      <a href="#gradients">Gradients</a>
+    </div>
+    
+    <div class="sidebar-section">
+      <div class="sidebar-title">Components</div>
+      <a href="#buttons">Buttons</a>
+      <a href="#cards">Cards</a>
+      <a href="#badges">Badges</a>
+      <a href="#alerts">Alerts</a>
+      <a href="#forms">Forms</a>
+      <a href="#navbar">Navbar</a>
+      <a href="#navigation">Navigation</a>
+      <a href="#sidebar">Sidebar</a>
+      <a href="#dropdown">Dropdowns</a>
+      <a href="#accordion">Accordion</a>
+      <a href="#breadcrumb">Breadcrumb</a>
+      <a href="#pagination">Pagination</a>
+      <a href="#list-group">List Groups</a>
+      <a href="#toast">Toast</a>
+      <a href="#modal">Modal</a>
+      <a href="#offcanvas">Offcanvas</a>
+    </div>
+    
+    <div class="sidebar-section">
+      <div class="sidebar-title">Layout</div>
+      <a href="#containers">Containers</a>
+      <a href="#grid">Grid</a>
+      <a href="#flexbox">Flexbox</a>
+      <a href="#spacing">Spacing</a>
+      <a href="#sizing">Sizing</a>
+    </div>
+    
+    <div class="sidebar-section">
+      <div class="sidebar-title">Typography</div>
+      <a href="#font-sizes">Font Sizes</a>
+      <a href="#font-weights">Font Weights</a>
+      <a href="#text-align">Text Align</a>
+      <a href="#text-transform">Text Transform</a>
+    </div>
+    
+    <div class="sidebar-section">
+      <div class="sidebar-title">Effects</div>
+      <a href="#shadows">Shadows</a>
+      <a href="#opacity">Opacity</a>
+      <a href="#animations">Animations</a>
+      <a href="#transitions">Transitions</a>
+      <a href="#hover-effects">Hover Effects</a>
+      <a href="#glass-effects">Glass Effects</a>
+    </div>
+    
+    <div class="sidebar-section">
+      <div class="sidebar-title">Utilities</div>
+      <a href="#display">Display</a>
+      <a href="#position">Position</a>
+      <a href="#overflow">Overflow</a>
+      <a href="#cursor">Cursor</a>
+      <a href="#rounded">Border Radius</a>
+      <a href="#loading">Loading</a>
+    </div>
+  </aside>
+  
+  <!-- Main Content -->
+  <main class="docs-main docs-main-content">
+    
+    <h1 class="text-gradient-theme mb-4">Complete Class Reference</h1>
+    <p class="text-theme-dark mb-12">Comprehensive documentation of all available CSS classes in Solanke Themes</p>
+    
+    <!-- Installation -->
+    <section id="installation" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Installation</h2>
+      <div class="code-block mb-4">
+&lt;!-- CDN --&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/solanke-themes@latest/solanke-themes.css"&gt;
+
+&lt;!-- NPM --&gt;
+npm install solanke-themes</div>
+      
+      <h3 class="text-theme-darkest mt-6 mb-4">Basic Usage</h3>
+      <div class="code-block">
+&lt;html data-color-theme="luxury"&gt;
+&lt;body data-theme-enabled&gt;
+  &lt;!-- Your content --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+    </section>
+    
+    <!-- Themes -->
+    <section id="themes" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Themes</h2>
+      <p class="text-theme-dark mb-4">Three professional themes available</p>
+      
+      <div class="grid-3 gap-4">
+        <div class="card">
+          <h4 class="text-theme-darkest">🌿 Luxury Green</h4>
+          <p class="text-theme-dark text-sm">Natural, elegant design</p>
+          <div class="code-block mt-2">data-color-theme="luxury"</div>
+        </div>
+        <div class="card">
+          <h4 class="text-theme-darkest">💼 Corporate Blue</h4>
+          <p class="text-theme-dark text-sm">Professional, business-ready</p>
+          <div class="code-block mt-2">data-color-theme="corporate"</div>
+        </div>
+        <div class="card">
+          <h4 class="text-theme-darkest">🖤 Shadcn Dark</h4>
+          <p class="text-theme-dark text-sm">Minimal black & white</p>
+          <div class="code-block mt-2">data-color-theme="shadcn"</div>
+        </div>
+      </div>
+      
+      <h3 class="text-theme-darkest mt-8 mb-4">Dark Mode</h3>
+      <div class="code-block">&lt;html data-color-theme="luxury" class="dark"&gt;</div>
+    </section>
+    
+    <!-- Background Colors -->
+    <section id="backgrounds" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Background Colors</h2>
+      
+      <div class="grid-2 gap-2">
+        <div class="class-card">
+          <div class="class-name">.bg-theme-darkest</div>
+          <div class="class-desc">Darkest background color</div>
+          <div class="example-box bg-theme-darkest text-theme-cream">Example</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.bg-theme-dark</div>
+          <div class="class-desc">Dark background color</div>
+          <div class="example-box bg-theme-dark text-theme-cream">Example</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.bg-theme-sage</div>
+          <div class="class-desc">Sage/medium background</div>
+          <div class="example-box bg-theme-sage text-theme-cream">Example</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.bg-theme-mint</div>
+          <div class="class-desc">Mint/light background</div>
+          <div class="example-box bg-theme-mint text-theme-darkest">Example</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.bg-theme-cream</div>
+          <div class="class-desc">Cream/lightest background</div>
+          <div class="example-box bg-theme-cream text-theme-darkest border border-theme-mint">Example</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.bg-theme-accent</div>
+          <div class="class-desc">Accent color background</div>
+          <div class="example-box bg-theme-accent text-theme-cream">Example</div>
+        </div>
+      </div>
+      
+      <h3 class="text-theme-darkest mt-8 mb-4">Background with Opacity</h3>
+      <div class="grid-3 gap-2">
+        <div class="class-card">
+          <div class="class-name">.bg-theme-darkest-80</div>
+          <div class="class-desc">80% opacity</div>
+        </div>
+        <div class="class-card">
+          <div class="class-name">.bg-theme-darkest-60</div>
+          <div class="class-desc">60% opacity</div>
+        </div>
+        <div class="class-card">
+          <div class="class-name">.bg-theme-darkest-40</div>
+          <div class="class-desc">40% opacity</div>
+        </div>
+        <div class="class-card">
+          <div class="class-name">.bg-theme-darkest-20</div>
+          <div class="class-desc">20% opacity</div>
+        </div>
+        <div class="class-card">
+          <div class="class-name">.bg-theme-sage-60/40/20/10</div>
+          <div class="class-desc">Sage with opacity</div>
+        </div>
+        <div class="class-card">
+          <div class="class-name">.bg-theme-mint-60/40/20/10</div>
+          <div class="class-desc">Mint with opacity</div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Text Colors -->
+    <section id="text-colors" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Text Colors</h2>
+      
+      <div class="grid-2 gap-2">
+        <div class="class-card">
+          <div class="class-name">.text-theme-darkest</div>
+          <div class="class-desc">Darkest text color</div>
+          <div class="example-box"><span class="text-theme-darkest font-semibold">Example Text</span></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.text-theme-dark</div>
+          <div class="class-desc">Dark text color</div>
+          <div class="example-box"><span class="text-theme-dark font-semibold">Example Text</span></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.text-theme-sage</div>
+          <div class="class-desc">Sage text color</div>
+          <div class="example-box"><span class="text-theme-sage font-semibold">Example Text</span></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.text-theme-mint</div>
+          <div class="class-desc">Mint text color</div>
+          <div class="example-box"><span class="text-theme-mint font-semibold">Example Text</span></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.text-theme-cream</div>
+          <div class="class-desc">Cream text color</div>
+          <div class="example-box bg-theme-darkest"><span class="text-theme-cream font-semibold">Example Text</span></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.text-theme-accent</div>
+          <div class="class-desc">Accent text color</div>
+          <div class="example-box"><span class="text-theme-accent font-semibold">Example Text</span></div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Gradients -->
+    <section id="gradients" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Gradients</h2>
+      
+      <div class="grid-2 gap-2">
+        <div class="class-card">
+          <div class="class-name">.gradient-theme-primary</div>
+          <div class="class-desc">Primary gradient (darkest → sage → mint)</div>
+          <div class="example-box gradient-theme-primary text-theme-cream p-4">Example Gradient</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.gradient-theme-secondary</div>
+          <div class="class-desc">Secondary gradient (sage → mint)</div>
+          <div class="example-box gradient-theme-secondary text-theme-cream p-4">Example Gradient</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.gradient-theme-accent</div>
+          <div class="class-desc">Accent gradient</div>
+          <div class="example-box gradient-theme-accent text-theme-cream p-4">Example Gradient</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.gradient-theme-vertical</div>
+          <div class="class-desc">Vertical gradient</div>
+          <div class="example-box gradient-theme-vertical text-theme-cream p-4">Example Gradient</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.text-gradient-theme</div>
+          <div class="class-desc">Gradient text effect</div>
+          <div class="example-box"><span class="text-gradient-theme font-bold text-2xl">Gradient Text</span></div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Buttons -->
+    <section id="buttons" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Buttons</h2>
+      
+      <h3 class="text-theme-darkest mb-4">Base Button Classes</h3>
+      <div class="grid-2 gap-2">
+        <div class="class-card">
+          <div class="class-name">.btn</div>
+          <div class="class-desc">Base button class</div>
+          <div class="example-box"><button class="btn">Base Button</button></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.btn-primary</div>
+          <div class="class-desc">Primary button</div>
+          <div class="example-box"><button class="btn-primary">Primary</button></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.btn-secondary</div>
+          <div class="class-desc">Secondary button</div>
+          <div class="example-box"><button class="btn-secondary">Secondary</button></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.btn-success</div>
+          <div class="class-desc">Success button</div>
+          <div class="example-box"><button class="btn-success">Success</button></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.btn-danger</div>
+          <div class="class-desc">Danger button</div>
+          <div class="example-box"><button class="btn-danger">Danger</button></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.btn-warning</div>
+          <div class="class-desc">Warning button</div>
+          <div class="example-box"><button class="btn-warning">Warning</button></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.btn-info</div>
+          <div class="class-desc">Info button</div>
+          <div class="example-box"><button class="btn-info">Info</button></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.btn-light</div>
+          <div class="class-desc">Light button</div>
+          <div class="example-box"><button class="btn-light">Light</button></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.btn-dark</div>
+          <div class="class-desc">Dark button</div>
+          <div class="example-box"><button class="btn-dark">Dark</button></div>
+        </div>
+      </div>
+      
+      <h3 class="text-theme-darkest mt-8 mb-4">Button Sizes</h3>
+      <div class="grid-3 gap-2">
+        <div class="class-card">
+          <div class="class-name">.btn-sm</div>
+          <div class="class-desc">Small button</div>
+          <div class="example-box"><button class="btn-primary btn-sm">Small</button></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.btn (default)</div>
+          <div class="class-desc">Regular button</div>
+          <div class="example-box"><button class="btn-primary">Regular</button></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.btn-lg</div>
+          <div class="class-desc">Large button</div>
+          <div class="example-box"><button class="btn-primary btn-lg">Large</button></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.btn-xl</div>
+          <div class="class-desc">Extra large button</div>
+          <div class="example-box"><button class="btn-primary btn-xl">Extra Large</button></div>
+        </div>
+      </div>
+      
+      <h3 class="text-theme-darkest mt-8 mb-4">Button Variants</h3>
+      <div class="grid-2 gap-2">
+        <div class="class-card">
+          <div class="class-name">.btn-outline</div>
+          <div class="class-desc">Outline button</div>
+          <div class="example-box"><button class="btn-outline">Outline</button></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.btn-ghost</div>
+          <div class="class-desc">Ghost button</div>
+          <div class="example-box"><button class="btn-ghost">Ghost</button></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.btn-theme-primary</div>
+          <div class="class-desc">Legacy theme primary</div>
+          <div class="example-box"><button class="btn-theme-primary">Theme Primary</button></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.btn-theme-secondary</div>
+          <div class="class-desc">Legacy theme secondary</div>
+          <div class="example-box"><button class="btn-theme-secondary">Theme Secondary</button></div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Cards -->
+    <section id="cards" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Cards</h2>
+      
+      <div class="grid-2 gap-2">
+        <div class="class-card">
+          <div class="class-name">.card / .card-theme</div>
+          <div class="class-desc">Base card component</div>
+          <div class="example-box">
+            <div class="card p-4">
+              <h4>Card Title</h4>
+              <p class="text-sm">Card content goes here</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.card-header</div>
+          <div class="class-desc">Card header section</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.card-body</div>
+          <div class="class-desc">Card body section</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.card-footer</div>
+          <div class="class-desc">Card footer section</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.card-title</div>
+          <div class="class-desc">Card title styling</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.card-subtitle</div>
+          <div class="class-desc">Card subtitle styling</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.card-text</div>
+          <div class="class-desc">Card text styling</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.card-outline</div>
+          <div class="class-desc">Outlined card variant</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.card-solid</div>
+          <div class="class-desc">Solid card variant</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.card-horizontal</div>
+          <div class="class-desc">Horizontal card layout</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.card-group</div>
+          <div class="class-desc">Card group container</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.card-columns</div>
+          <div class="class-desc">Masonry card layout</div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Badges -->
+    <section id="badges" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Badges</h2>
+      
+      <div class="grid-3 gap-2">
+        <div class="class-card">
+          <div class="class-name">.badge-theme-primary</div>
+          <div class="example-box"><span class="badge-theme-primary">Primary Badge</span></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.badge-theme-secondary</div>
+          <div class="example-box"><span class="badge-theme-secondary">Secondary Badge</span></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.badge-theme-accent</div>
+          <div class="example-box"><span class="badge-theme-accent">Accent Badge</span></div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Alerts -->
+    <section id="alerts" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Alerts</h2>
+      
+      <div class="grid-2 gap-2">
+        <div class="class-card">
+          <div class="class-name">.alert-theme-info</div>
+          <div class="example-box">
+            <div class="alert-theme-info">This is an info alert</div>
+          </div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.alert-theme-success</div>
+          <div class="example-box">
+            <div class="alert-theme-success">This is a success alert</div>
+          </div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.alert-theme-warning</div>
+          <div class="example-box">
+            <div class="alert-theme-warning">This is a warning alert</div>
+          </div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.alert-theme-danger</div>
+          <div class="example-box">
+            <div class="alert-theme-danger">This is a danger alert</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Forms -->
+    <section id="forms" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Form Elements</h2>
+      
+      <div class="grid-2 gap-2">
+        <div class="class-card">
+          <div class="class-name">.input-theme</div>
+          <div class="class-desc">Themed input field</div>
+          <div class="example-box">
+            <input type="text" class="input-theme" placeholder="Enter text">
+          </div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.textarea-theme</div>
+          <div class="class-desc">Themed textarea</div>
+          <div class="example-box">
+            <textarea class="textarea-theme" placeholder="Enter text"></textarea>
+          </div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.select-theme</div>
+          <div class="class-desc">Themed select dropdown</div>
+          <div class="example-box">
+            <select class="select-theme">
+              <option>Option 1</option>
+              <option>Option 2</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.checkbox-theme</div>
+          <div class="class-desc">Themed checkbox</div>
+          <div class="example-box">
+            <label class="flex items-center gap-2">
+              <input type="checkbox" class="checkbox-theme"> Checkbox
+            </label>
+          </div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.radio-theme</div>
+          <div class="class-desc">Themed radio button</div>
+          <div class="example-box">
+            <label class="flex items-center gap-2">
+              <input type="radio" name="radio1" class="radio-theme"> Radio
+            </label>
+          </div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.label-theme</div>
+          <div class="class-desc">Themed form label</div>
+          <div class="example-box">
+            <label class="label-theme">Form Label</label>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Navbar -->
+    <section id="navbar" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Navbar</h2>
+      
+      <div class="grid-2 gap-2">
+        <div class="class-card">
+          <div class="class-name">.navbar</div>
+          <div class="class-desc">Base navbar component</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.navbar-brand</div>
+          <div class="class-desc">Navbar brand/logo</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.navbar-nav</div>
+          <div class="class-desc">Navbar navigation list</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.nav-item</div>
+          <div class="class-desc">Navigation item</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.nav-link</div>
+          <div class="class-desc">Navigation link</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.navbar-toggler</div>
+          <div class="class-desc">Mobile menu toggle button</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.navbar-toggler-icon</div>
+          <div class="class-desc">Hamburger menu icon</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.navbar-collapse</div>
+          <div class="class-desc">Collapsible navbar content</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.navbar-glass</div>
+          <div class="class-desc">Glass morphism navbar</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.navbar-light</div>
+          <div class="class-desc">Light navbar variant</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.navbar-dark</div>
+          <div class="class-desc">Dark navbar variant</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.navbar-fixed-top</div>
+          <div class="class-desc">Fixed to top</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.navbar-fixed-bottom</div>
+          <div class="class-desc">Fixed to bottom</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.navbar-sticky</div>
+          <div class="class-desc">Sticky navbar</div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Navigation -->
+    <section id="navigation" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Navigation (Tabs/Pills)</h2>
+      
+      <div class="grid-2 gap-2">
+        <div class="class-card">
+          <div class="class-name">.nav</div>
+          <div class="class-desc">Base navigation component</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.nav-tabs</div>
+          <div class="class-desc">Tab navigation style</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.nav-pills</div>
+          <div class="class-desc">Pill navigation style</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.nav-link.active</div>
+          <div class="class-desc">Active nav link state</div>
+        </div>
+      </div>
+      
+      <div class="example-box mt-4">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a href="#" class="nav-link active">Active</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Link</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Link</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    
+    <!-- Sidebar -->
+    <section id="sidebar" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Sidebar</h2>
+      
+      <div class="grid-2 gap-2">
+        <div class="class-card">
+          <div class="class-name">.sidebar</div>
+          <div class="class-desc">Responsive sidebar component</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.sidebar.collapsed</div>
+          <div class="class-desc">Collapsed sidebar state</div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- List Groups -->
+    <section id="list-group" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">List Groups</h2>
+      
+      <div class="grid-2 gap-2">
+        <div class="class-card">
+          <div class="class-name">.list-group</div>
+          <div class="class-desc">List group container</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.list-group-item</div>
+          <div class="class-desc">List group item</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.list-group-item-action</div>
+          <div class="class-desc">Interactive list item</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.list-group-item.active</div>
+          <div class="class-desc">Active list item</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.list-group-horizontal</div>
+          <div class="class-desc">Horizontal list layout</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.list-group-flush</div>
+          <div class="class-desc">Flush list (no borders)</div>
+        </div>
+      </div>
+      
+      <div class="example-box mt-4">
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action active">Active item</a>
+          <a href="#" class="list-group-item list-group-item-action">Second item</a>
+          <a href="#" class="list-group-item list-group-item-action">Third item</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Accordion -->
+    <section id="accordion" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Accordion</h2>
+      
+      <div class="grid-2 gap-2">
+        <div class="class-card">
+          <div class="class-name">.accordion</div>
+          <div class="class-desc">Accordion container</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.accordion-item</div>
+          <div class="class-desc">Accordion item</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.accordion-header</div>
+          <div class="class-desc">Accordion header/button</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.accordion-body</div>
+          <div class="class-desc">Accordion content body</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.accordion-item.active</div>
+          <div class="class-desc">Expanded accordion item</div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Breadcrumb & Pagination -->
+    <section id="breadcrumb" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Breadcrumb</h2>
+      
+      <div class="grid-2 gap-2">
+        <div class="class-card">
+          <div class="class-name">.breadcrumb</div>
+          <div class="class-desc">Breadcrumb navigation</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.breadcrumb-item</div>
+          <div class="class-desc">Breadcrumb item</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.breadcrumb-item.active</div>
+          <div class="class-desc">Current breadcrumb</div>
+        </div>
+      </div>
+      
+      <div class="example-box mt-4">
+        <nav class="breadcrumb">
+          <a href="#" class="breadcrumb-item">Home</a>
+          <a href="#" class="breadcrumb-item">Library</a>
+          <span class="breadcrumb-item active">Data</span>
+        </nav>
+      </div>
+    </section>
+    
+    <section id="pagination" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Pagination</h2>
+      
+      <div class="grid-2 gap-2">
+        <div class="class-card">
+          <div class="class-name">.pagination</div>
+          <div class="class-desc">Pagination container</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.page-item</div>
+          <div class="class-desc">Page item wrapper</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.page-link</div>
+          <div class="class-desc">Page link button</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.page-item.active</div>
+          <div class="class-desc">Active page</div>
+        </div>
+      </div>
+      
+      <div class="example-box mt-4">
+        <nav class="pagination">
+          <button class="page-link">Previous</button>
+          <button class="page-link active">1</button>
+          <button class="page-link">2</button>
+          <button class="page-link">3</button>
+          <button class="page-link">Next</button>
+        </nav>
+      </div>
+    </section>
+    
+    <!-- Dropdowns -->
+    <section id="dropdown" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Dropdowns</h2>
+      
+      <div class="grid-2 gap-2">
+        <div class="class-card">
+          <div class="class-name">.dropdown</div>
+          <div class="class-desc">Dropdown container</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.dropdown-toggle</div>
+          <div class="class-desc">Dropdown trigger button</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.dropdown-menu</div>
+          <div class="class-desc">Dropdown menu container</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.dropdown-item</div>
+          <div class="class-desc">Dropdown menu item</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.dropdown-divider</div>
+          <div class="class-desc">Dropdown separator</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.dropdown-menu.show</div>
+          <div class="class-desc">Visible dropdown state</div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Toast & Modal -->
+    <section id="toast" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Toast Notifications</h2>
+      
+      <div class="grid-2 gap-2">
+        <div class="class-card">
+          <div class="class-name">.toast</div>
+          <div class="class-desc">Toast notification</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.toast-header</div>
+          <div class="class-desc">Toast header</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.toast-body</div>
+          <div class="class-desc">Toast body content</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.toast.show</div>
+          <div class="class-desc">Visible toast</div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="modal" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Modal</h2>
+      
+      <div class="grid-2 gap-2">
+        <div class="class-card">
+          <div class="class-name">.modal-overlay</div>
+          <div class="class-desc">Modal backdrop</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.modal-content</div>
+          <div class="class-desc">Modal content container</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.modal-header</div>
+          <div class="class-desc">Modal header</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.modal-body</div>
+          <div class="class-desc">Modal body content</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.modal-footer</div>
+          <div class="class-desc">Modal footer</div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="offcanvas" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Offcanvas</h2>
+      
+      <div class="grid-2 gap-2">
+        <div class="class-card">
+          <div class="class-name">.offcanvas</div>
+          <div class="class-desc">Offcanvas sidebar panel</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.offcanvas-header</div>
+          <div class="class-desc">Offcanvas header</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.offcanvas-body</div>
+          <div class="class-desc">Offcanvas body content</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.offcanvas.show</div>
+          <div class="class-desc">Visible offcanvas</div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- LAYOUT UTILITIES -->
+    
+    <!-- Containers -->
+    <section id="containers" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Containers</h2>
+      
+      <div class="grid-3 gap-2">
+        <div class="class-card">
+          <div class="class-name">.container</div>
+          <div class="class-desc">Max-width 1200px</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.container-sm</div>
+          <div class="class-desc">Max-width 640px</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.container-md</div>
+          <div class="class-desc">Max-width 768px</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.container-lg</div>
+          <div class="class-desc">Max-width 1024px</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.container-xl</div>
+          <div class="class-desc">Max-width 1400px</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.container-full</div>
+          <div class="class-desc">Width 100%</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.section</div>
+          <div class="class-desc">Padding 6rem vertical</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.section-sm</div>
+          <div class="class-desc">Padding 4rem vertical</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.section-lg</div>
+          <div class="class-desc">Padding 8rem vertical</div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Grid -->
+    <section id="grid" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Grid System</h2>
+      
+      <div class="grid-2 gap-2">
+        <div class="class-card">
+          <div class="class-name">.grid-2</div>
+          <div class="class-desc">2 column grid (responsive)</div>
+          <div class="example-box">
+            <div class="grid-2 gap-2">
+              <div class="bg-theme-sage-20 p-2">1</div>
+              <div class="bg-theme-sage-20 p-2">2</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.grid-3</div>
+          <div class="class-desc">3 column grid (responsive)</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.grid-4</div>
+          <div class="class-desc">4 column grid (responsive)</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.grid-auto-fit</div>
+          <div class="class-desc">Auto-fit grid (min 200px)</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.grid-auto-fit-sm</div>
+          <div class="class-desc">Auto-fit (min 150px)</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.grid-auto-fit-md</div>
+          <div class="class-desc">Auto-fit (min 250px)</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.grid-auto-fit-lg</div>
+          <div class="class-desc">Auto-fit (min 300px)</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.gap-{0-20}</div>
+          <div class="class-desc">Grid/flex gap (0.25rem increments)</div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Flexbox -->
+    <section id="flexbox" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Flexbox Utilities</h2>
+      
+      <h3 class="text-theme-darkest mb-4">Display & Direction</h3>
+      <div class="grid-4 gap-2 mb-6">
+        <div class="class-card"><div class="class-name">.flex</div></div>
+        <div class="class-card"><div class="class-name">.flex-row</div></div>
+        <div class="class-card"><div class="class-name">.flex-col</div></div>
+        <div class="class-card"><div class="class-name">.flex-wrap</div></div>
+        <div class="class-card"><div class="class-name">.flex-nowrap</div></div>
+        <div class="class-card"><div class="class-name">.inline-flex</div></div>
+      </div>
+      
+      <h3 class="text-theme-darkest mb-4">Justify Content</h3>
+      <div class="grid-3 gap-2 mb-6">
+        <div class="class-card"><div class="class-name">.justify-start</div></div>
+        <div class="class-card"><div class="class-name">.justify-end</div></div>
+        <div class="class-card"><div class="class-name">.justify-center</div></div>
+        <div class="class-card"><div class="class-name">.justify-between</div></div>
+        <div class="class-card"><div class="class-name">.justify-around</div></div>
+        <div class="class-card"><div class="class-name">.justify-evenly</div></div>
+      </div>
+      
+      <h3 class="text-theme-darkest mb-4">Align Items</h3>
+      <div class="grid-3 gap-2">
+        <div class="class-card"><div class="class-name">.items-start</div></div>
+        <div class="class-card"><div class="class-name">.items-end</div></div>
+        <div class="class-card"><div class="class-name">.items-center</div></div>
+        <div class="class-card"><div class="class-name">.items-baseline</div></div>
+        <div class="class-card"><div class="class-name">.items-stretch</div></div>
+      </div>
+    </section>
+    
+    <!-- Spacing -->
+    <section id="spacing" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Spacing Utilities</h2>
+      
+      <h3 class="text-theme-darkest mb-4">Margin Classes</h3>
+      <div class="grid-4 gap-2 mb-6">
+        <div class="class-card"><div class="class-name">.m-{0-20}</div><div class="class-desc">All sides</div></div>
+        <div class="class-card"><div class="class-name">.mx-{0-20}</div><div class="class-desc">Horizontal</div></div>
+        <div class="class-card"><div class="class-name">.my-{0-20}</div><div class="class-desc">Vertical</div></div>
+        <div class="class-card"><div class="class-name">.mt-{0-20}</div><div class="class-desc">Top</div></div>
+        <div class="class-card"><div class="class-name">.mr-{0-20}</div><div class="class-desc">Right</div></div>
+        <div class="class-card"><div class="class-name">.mb-{0-20}</div><div class="class-desc">Bottom</div></div>
+        <div class="class-card"><div class="class-name">.ml-{0-20}</div><div class="class-desc">Left</div></div>
+        <div class="class-card"><div class="class-name">.mx-auto</div><div class="class-desc">Center block</div></div>
+      </div>
+      
+      <h3 class="text-theme-darkest mb-4">Padding Classes</h3>
+      <div class="grid-4 gap-2">
+        <div class="class-card"><div class="class-name">.p-{0-20}</div><div class="class-desc">All sides</div></div>
+        <div class="class-card"><div class="class-name">.px-{0-20}</div><div class="class-desc">Horizontal</div></div>
+        <div class="class-card"><div class="class-name">.py-{0-20}</div><div class="class-desc">Vertical</div></div>
+        <div class="class-card"><div class="class-name">.pt-{0-20}</div><div class="class-desc">Top</div></div>
+        <div class="class-card"><div class="class-name">.pr-{0-20}</div><div class="class-desc">Right</div></div>
+        <div class="class-card"><div class="class-name">.pb-{0-20}</div><div class="class-desc">Bottom</div></div>
+        <div class="class-card"><div class="class-name">.pl-{0-20}</div><div class="class-desc">Left</div></div>
+      </div>
+      
+      <p class="text-sm text-theme-dark mt-4">Note: Numbers represent 0.25rem increments (e.g., .m-4 = 1rem)</p>
+    </section>
+    
+    <!-- Sizing -->
+    <section id="sizing" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Sizing Utilities</h2>
+      
+      <h3 class="text-theme-darkest mb-4">Width</h3>
+      <div class="grid-4 gap-2 mb-6">
+        <div class="class-card"><div class="class-name">.w-full</div><div class="class-desc">100%</div></div>
+        <div class="class-card"><div class="class-name">.w-auto</div><div class="class-desc">Auto</div></div>
+        <div class="class-card"><div class="class-name">.w-screen</div><div class="class-desc">100vw</div></div>
+        <div class="class-card"><div class="class-name">.w-{10-100}</div><div class="class-desc">10-100% (10 steps)</div></div>
+        <div class="class-card"><div class="class-name">.w-15</div><div class="class-desc">60px (3.75rem)</div></div>
+        <div class="class-card"><div class="class-name">.w-20</div><div class="class-desc">80px (5rem)</div></div>
+        <div class="class-card"><div class="class-name">.w-25</div><div class="class-desc">100px (6.25rem)</div></div>
+        <div class="class-card"><div class="class-name">.w-30</div><div class="class-desc">120px (7.5rem)</div></div>
+      </div>
+      
+      <h3 class="text-theme-darkest mb-4">Height</h3>
+      <div class="grid-4 gap-2 mb-6">
+        <div class="class-card"><div class="class-name">.h-full</div><div class="class-desc">100%</div></div>
+        <div class="class-card"><div class="class-name">.h-screen</div><div class="class-desc">100vh</div></div>
+        <div class="class-card"><div class="class-name">.h-auto</div><div class="class-desc">Auto</div></div>
+        <div class="class-card"><div class="class-name">.min-h-screen</div><div class="class-desc">Min-height 100vh</div></div>
+        <div class="class-card"><div class="class-name">.h-15</div><div class="class-desc">60px</div></div>
+        <div class="class-card"><div class="class-name">.h-20</div><div class="class-desc">80px</div></div>
+        <div class="class-card"><div class="class-name">.h-25</div><div class="class-desc">100px</div></div>
+        <div class="class-card"><div class="class-name">.h-30</div><div class="class-desc">120px</div></div>
+      </div>
+      
+      <h3 class="text-theme-darkest mb-4">Max Width</h3>
+      <div class="grid-4 gap-2">
+        <div class="class-card"><div class="class-name">.max-w-xs</div><div class="class-desc">320px</div></div>
+        <div class="class-card"><div class="class-name">.max-w-sm</div><div class="class-desc">384px</div></div>
+        <div class="class-card"><div class="class-name">.max-w-md</div><div class="class-desc">448px</div></div>
+        <div class="class-card"><div class="class-name">.max-w-lg</div><div class="class-desc">512px</div></div>
+        <div class="class-card"><div class="class-name">.max-w-xl</div><div class="class-desc">576px</div></div>
+        <div class="class-card"><div class="class-name">.max-w-2xl</div><div class="class-desc">672px</div></div>
+        <div class="class-card"><div class="class-name">.max-w-3xl</div><div class="class-desc">768px</div></div>
+        <div class="class-card"><div class="class-name">.max-w-4xl</div><div class="class-desc">896px</div></div>
+        <div class="class-card"><div class="class-name">.max-w-5xl</div><div class="class-desc">1024px</div></div>
+        <div class="class-card"><div class="class-name">.max-w-6xl</div><div class="class-desc">1152px</div></div>
+        <div class="class-card"><div class="class-name">.max-w-7xl</div><div class="class-desc">1280px</div></div>
+        <div class="class-card"><div class="class-name">.max-w-full</div><div class="class-desc">100%</div></div>
+      </div>
+    </section>
+    
+    <!-- TYPOGRAPHY -->
+    
+    <section id="font-sizes" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Font Sizes</h2>
+      
+      <div class="grid-2 gap-2">
+        <div class="class-card">
+          <div class="class-name">.text-xs</div>
+          <div class="class-desc">0.75rem (12px)</div>
+          <div class="example-box"><p class="text-xs m-0">Example Text</p></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.text-sm</div>
+          <div class="class-desc">0.875rem (14px)</div>
+          <div class="example-box"><p class="text-sm m-0">Example Text</p></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.text-base</div>
+          <div class="class-desc">1rem (16px)</div>
+          <div class="example-box"><p class="text-base m-0">Example Text</p></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.text-lg</div>
+          <div class="class-desc">1.125rem (18px)</div>
+          <div class="example-box"><p class="text-lg m-0">Example Text</p></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.text-xl</div>
+          <div class="class-desc">1.25rem (20px)</div>
+          <div class="example-box"><p class="text-xl m-0">Example Text</p></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.text-2xl</div>
+          <div class="class-desc">1.5rem (24px)</div>
+          <div class="example-box"><p class="text-2xl m-0">Example Text</p></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.text-3xl</div>
+          <div class="class-desc">1.875rem (30px)</div>
+          <div class="example-box"><p class="text-3xl m-0">Example Text</p></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.text-4xl</div>
+          <div class="class-desc">2.25rem (36px)</div>
+          <div class="example-box"><p class="text-4xl m-0">Example Text</p></div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="font-weights" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Font Weights</h2>
+      
+      <div class="grid-3 gap-2">
+        <div class="class-card">
+          <div class="class-name">.font-light</div>
+          <div class="example-box"><p class="font-light m-0">Light Text</p></div>
+        </div>
+        <div class="class-card">
+          <div class="class-name">.font-normal</div>
+          <div class="example-box"><p class="font-normal m-0">Normal Text</p></div>
+        </div>
+        <div class="class-card">
+          <div class="class-name">.font-medium</div>
+          <div class="example-box"><p class="font-medium m-0">Medium Text</p></div>
+        </div>
+        <div class="class-card">
+          <div class="class-name">.font-semibold</div>
+          <div class="example-box"><p class="font-semibold m-0">Semibold Text</p></div>
+        </div>
+        <div class="class-card">
+          <div class="class-name">.font-bold</div>
+          <div class="example-box"><p class="font-bold m-0">Bold Text</p></div>
+        </div>
+        <div class="class-card">
+          <div class="class-name">.font-black</div>
+          <div class="example-box"><p class="font-black m-0">Black Text</p></div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="text-align" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Text Alignment</h2>
+      
+      <div class="grid-4 gap-2">
+        <div class="class-card"><div class="class-name">.text-left</div></div>
+        <div class="class-card"><div class="class-name">.text-center</div></div>
+        <div class="class-card"><div class="class-name">.text-right</div></div>
+        <div class="class-card"><div class="class-name">.text-justify</div></div>
+      </div>
+    </section>
+    
+    <section id="text-transform" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Text Transform</h2>
+      
+      <div class="grid-4 gap-2">
+        <div class="class-card"><div class="class-name">.uppercase</div></div>
+        <div class="class-card"><div class="class-name">.lowercase</div></div>
+        <div class="class-card"><div class="class-name">.capitalize</div></div>
+        <div class="class-card"><div class="class-name">.normal-case</div></div>
+      </div>
+    </section>
+    
+    <!-- EFFECTS -->
+    
+    <section id="shadows" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Shadows</h2>
+      
+      <div class="grid-2 gap-2">
+        <div class="class-card">
+          <div class="class-name">.shadow-theme-sm</div>
+          <div class="example-box shadow-theme-sm bg-theme-cream p-4 border-none">Small Shadow</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.shadow-theme-md</div>
+          <div class="example-box shadow-theme-md bg-theme-cream p-4 border-none">Medium Shadow</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.shadow-theme-lg</div>
+          <div class="example-box shadow-theme-lg bg-theme-cream p-4 border-none">Large Shadow</div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.shadow-theme-xl</div>
+          <div class="example-box shadow-theme-xl bg-theme-cream p-4 border-none">XL Shadow</div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="animations" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Animations</h2>
+      
+      <div class="grid-3 gap-2">
+        <div class="class-card">
+          <div class="class-name">.animate-fade-in</div>
+          <div class="example-box"><div class="animate-fade-in text-center">Fade In</div></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.animate-pulse</div>
+          <div class="example-box"><div class="animate-pulse text-center">Pulse</div></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.animate-float</div>
+          <div class="example-box"><div class="animate-float text-center">Float</div></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.animate-spin</div>
+          <div class="example-box"><div class="animate-spin text-center text-2xl">⚙️</div></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.animate-bounce</div>
+          <div class="example-box"><div class="animate-bounce text-center">Bounce</div></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.animate-scale-up</div>
+          <div class="example-box"><div class="animate-scale-up text-center">Scale Up</div></div>
+        </div>
+      </div>
+      
+      <h3 class="text-theme-darkest mt-8 mb-4">Animation Delays</h3>
+      <div class="grid-4 gap-2">
+        <div class="class-card"><div class="class-name">.delay-100</div></div>
+        <div class="class-card"><div class="class-name">.delay-200</div></div>
+        <div class="class-card"><div class="class-name">.delay-300</div></div>
+        <div class="class-card"><div class="class-name">.delay-400</div></div>
+        <div class="class-card"><div class="class-name">.delay-500</div></div>
+      </div>
+    </section>
+    
+    <section id="hover-effects" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Hover Effects</h2>
+      
+      <div class="grid-3 gap-2">
+        <div class="class-card">
+          <div class="class-name">.hover-lift</div>
+          <div class="class-desc">Lifts element on hover</div>
+          <div class="example-box"><div class="card hover-lift p-4">Hover Me</div></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.hover-scale</div>
+          <div class="class-desc">Scales element on hover</div>
+          <div class="example-box"><div class="card hover-scale p-4">Hover Me</div></div>
+        </div>
+        
+        <div class="class-card">
+          <div class="class-name">.hover-brightness</div>
+          <div class="class-desc">Brightens on hover</div>
+          <div class="example-box"><div class="card hover-brightness p-4">Hover Me</div></div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="glass-effects" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Glass Morphism</h2>
+      
+      <div class="grid-2 gap-2">
+        <div class="class-card">
+          <div class="class-name">.glass-theme</div>
+          <div class="class-desc">Glass morphism effect</div>
+          <div class="example-box">
+            <div class="glass-theme p-6">
+              <h4 class="text-theme-darkest">Glass Card</h4>
+              <p class="text-theme-dark text-sm">Beautiful frosted glass effect</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="opacity" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Opacity</h2>
+      
+      <div class="grid-5 gap-2">
+        <div class="class-card"><div class="class-name">.opacity-0</div></div>
+        <div class="class-card"><div class="class-name">.opacity-10</div></div>
+        <div class="class-card"><div class="class-name">.opacity-20</div></div>
+        <div class="class-card"><div class="class-name">.opacity-30</div></div>
+        <div class="class-card"><div class="class-name">.opacity-40</div></div>
+        <div class="class-card"><div class="class-name">.opacity-50</div></div>
+        <div class="class-card"><div class="class-name">.opacity-60</div></div>
+        <div class="class-card"><div class="class-name">.opacity-70</div></div>
+        <div class="class-card"><div class="class-name">.opacity-80</div></div>
+        <div class="class-card"><div class="class-name">.opacity-90</div></div>
+        <div class="class-card"><div class="class-name">.opacity-100</div></div>
+      </div>
+    </section>
+    
+    <section id="transitions" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Transitions</h2>
+      
+      <div class="grid-4 gap-2">
+        <div class="class-card"><div class="class-name">.transition-all</div></div>
+        <div class="class-card"><div class="class-name">.transition-colors</div></div>
+        <div class="class-card"><div class="class-name">.transition-opacity</div></div>
+        <div class="class-card"><div class="class-name">.transition-transform</div></div>
+      </div>
+    </section>
+    
+    <!-- UTILITIES -->
+    
+    <section id="display" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Display</h2>
+      
+      <div class="grid-4 gap-2">
+        <div class="class-card"><div class="class-name">.block</div></div>
+        <div class="class-card"><div class="class-name">.inline-block</div></div>
+        <div class="class-card"><div class="class-name">.inline</div></div>
+        <div class="class-card"><div class="class-name">.flex</div></div>
+        <div class="class-card"><div class="class-name">.inline-flex</div></div>
+        <div class="class-card"><div class="class-name">.grid</div></div>
+        <div class="class-card"><div class="class-name">.hidden</div></div>
+        <div class="class-card"><div class="class-name">.none</div></div>
+      </div>
+    </section>
+    
+    <section id="position" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Position</h2>
+      
+      <div class="grid-4 gap-2">
+        <div class="class-card"><div class="class-name">.static</div></div>
+        <div class="class-card"><div class="class-name">.relative</div></div>
+        <div class="class-card"><div class="class-name">.absolute</div></div>
+        <div class="class-card"><div class="class-name">.fixed</div></div>
+        <div class="class-card"><div class="class-name">.sticky</div></div>
+      </div>
+      
+      <h3 class="text-theme-darkest mt-6 mb-4">Position Values</h3>
+      <div class="grid-4 gap-2">
+        <div class="class-card"><div class="class-name">.top-0</div></div>
+        <div class="class-card"><div class="class-name">.right-0</div></div>
+        <div class="class-card"><div class="class-name">.bottom-0</div></div>
+        <div class="class-card"><div class="class-name">.left-0</div></div>
+        <div class="class-card"><div class="class-name">.top-1-2</div><div class="class-desc">50%</div></div>
+        <div class="class-card"><div class="class-name">.inset-0</div></div>
+      </div>
+    </section>
+    
+    <section id="overflow" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Overflow</h2>
+      
+      <div class="grid-4 gap-2">
+        <div class="class-card"><div class="class-name">.overflow-auto</div></div>
+        <div class="class-card"><div class="class-name">.overflow-hidden</div></div>
+        <div class="class-card"><div class="class-name">.overflow-visible</div></div>
+        <div class="class-card"><div class="class-name">.overflow-scroll</div></div>
+        <div class="class-card"><div class="class-name">.overflow-x-auto</div></div>
+        <div class="class-card"><div class="class-name">.overflow-y-auto</div></div>
+      </div>
+    </section>
+    
+    <section id="cursor" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Cursor</h2>
+      
+      <div class="grid-4 gap-2">
+        <div class="class-card">
+          <div class="class-name">.cursor-pointer</div>
+          <div class="example-box cursor-pointer">Hover me</div>
+        </div>
+        <div class="class-card">
+          <div class="class-name">.cursor-default</div>
+        </div>
+        <div class="class-card">
+          <div class="class-name">.cursor-not-allowed</div>
+          <div class="example-box cursor-not-allowed">Disabled</div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="rounded" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Border Radius</h2>
+      
+      <div class="grid-4 gap-2">
+        <div class="class-card">
+          <div class="class-name">.rounded-none</div>
+          <div class="example-box bg-theme-sage-20 p-3 rounded-none border-2 border-theme-sage">None</div>
+        </div>
+        <div class="class-card">
+          <div class="class-name">.rounded</div>
+          <div class="example-box bg-theme-sage-20 p-3 rounded border-2 border-theme-sage">Small</div>
+        </div>
+        <div class="class-card">
+          <div class="class-name">.rounded-lg</div>
+          <div class="example-box bg-theme-sage-20 p-3 rounded-lg border-2 border-theme-sage">Large</div>
+        </div>
+        <div class="class-card">
+          <div class="class-name">.rounded-xl</div>
+          <div class="example-box bg-theme-sage-20 p-3 rounded-xl border-2 border-theme-sage">XL</div>
+        </div>
+        <div class="class-card">
+          <div class="class-name">.rounded-2xl</div>
+          <div class="example-box bg-theme-sage-20 p-3 rounded-2xl border-2 border-theme-sage">2XL</div>
+        </div>
+        <div class="class-card">
+          <div class="class-name">.rounded-3xl</div>
+          <div class="example-box bg-theme-sage-20 p-3 rounded-3xl border-2 border-theme-sage">3XL</div>
+        </div>
+        <div class="class-card">
+          <div class="class-name">.rounded-full</div>
+          <div class="example-box bg-theme-sage-20 p-3 rounded-full border-2 border-theme-sage">Full</div>
+        </div>
+      </div>
+      
+      <h3 class="text-theme-darkest mt-6 mb-4">Border Classes</h3>
+      <div class="grid-4 gap-2">
+        <div class="class-card"><div class="class-name">.border</div><div class="class-desc">1px</div></div>
+        <div class="class-card"><div class="class-name">.border-2</div><div class="class-desc">2px</div></div>
+        <div class="class-card"><div class="class-name">.border-4</div><div class="class-desc">4px</div></div>
+        <div class="class-card"><div class="class-name">.border-theme-sage</div></div>
+        <div class="class-card"><div class="class-name">.border-theme-mint</div></div>
+      </div>
+    </section>
+    
+    <section id="loading" class="mb-16">
+      <h2 class="text-theme-darkest mb-6">Loading States</h2>
+      
+      <h3 class="text-theme-darkest mb-4">Spinners</h3>
+      <div class="grid-3 gap-2 mb-6">
+        <div class="class-card">
+          <div class="class-name">.spinner-sm</div>
+          <div class="example-box text-center"><div class="spinner-sm mx-auto"></div></div>
+        </div>
+        <div class="class-card">
+          <div class="class-name">.spinner</div>
+          <div class="example-box text-center"><div class="spinner mx-auto"></div></div>
+        </div>
+        <div class="class-card">
+          <div class="class-name">.spinner-lg</div>
+          <div class="example-box text-center"><div class="spinner-lg mx-auto"></div></div>
+        </div>
+      </div>
+      
+      <h3 class="text-theme-darkest mb-4">Progress Bar</h3>
+      <div class="class-card mb-6">
+        <div class="class-name">.progress-bar</div>
+        <div class="example-box">
+          <div class="progress-bar">
+            <div class="progress-bar-fill w-75"></div>
+          </div>
+        </div>
+      </div>
+      
+      <h3 class="text-theme-darkest mb-4">Skeleton Loaders</h3>
+      <div class="class-card">
+        <div class="class-name">.skeleton</div>
+        <div class="example-box">
+          <div class="skeleton skeleton-text"></div>
+          <div class="skeleton skeleton-text w-80"></div>
+          <div class="skeleton skeleton-text w-60"></div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Final Section -->
+    <section class="mb-16 text-center">
+      <h2 class="text-gradient-theme mb-4">That's Everything! 🎉</h2>
+      <p class="text-theme-dark mb-6">You now have access to all classes in Solanke Themes</p>
+      <div class="flex gap-4 justify-center flex-wrap">
+        <a href="index.html" class="btn-primary">← Back to Home</a>
+        <a href="demo.html" class="btn-secondary" target="_blank">View Demo</a>
+        <button onclick="window.print()" class="btn-secondary">🖨️ Print Reference</button>
+      </div>
+    </section>
+    
+  </main>
+  
+  <script>
+    function switchTheme(theme) {
+      document.documentElement.setAttribute('data-color-theme', theme);
+    }
+    
+    function toggleDark() {
+      document.documentElement.classList.toggle('dark');
+    }
+    
+    // Highlight active section in sidebar
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.docs-sidebar a');
+    
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (scrollY >= sectionTop - 100) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+  
+</body>
+</html>
+

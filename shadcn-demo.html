@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" data-color-theme="shadcn" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadcn Dark Theme Demo - Solanke Themes</title>
+    <link rel="stylesheet" href="solanke-themes.css">
+</head>
+<body data-theme-enabled>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-glass navbar-sticky-top">
+        <a href="#" class="navbar-brand">Shadcn UI</a>
+        
+        <button class="navbar-toggler" onclick="toggleNavbar()">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="#" class="nav-link active">Dashboard</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Products</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Analytics</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Settings</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Container with Sidebar and Main Content -->
+    <div>
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="#" class="active">Dashboard</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Orders</a></li>
+                <li><a href="#">Customers</a></li>
+                <li><a href="#">Analytics</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <h1>Shadcn Dark Theme</h1>
+            <p class="text-theme-sage mb-8">A modern, minimal black and white aesthetic inspired by shadcn/ui</p>
+            
+            <!-- Stats Cards Grid -->
+            <div>
+                <!-- Card 1 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Total Revenue</h3>
+                    </div>
+                    <div class="card-body">
+                        <p style="font-size: 2rem; font-weight: 700; margin: 1rem 0;">$45,231.89</p>
+                        <p class="text-theme-sage">+20.1% from last month</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Active Users</h3>
+                    </div>
+                    <div class="card-body">
+                        <p style="font-size: 2rem; font-weight: 700; margin: 1rem 0;">2,350</p>
+                        <p class="text-theme-sage">+180.1% from last month</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Sales</h3>
+                    </div>
+                    <div class="card-body">
+                        <p style="font-size: 2rem; font-weight: 700; margin: 1rem 0;">12,234</p>
+                        <p class="text-theme-sage">+19% from last month</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Active Now</h3>
+                    </div>
+                    <div class="card-body">
+                        <p style="font-size: 2rem; font-weight: 700; margin: 1rem 0;">573</p>
+                        <p class="text-theme-sage">+201 since last hour</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Orders -->
+            <div>
+                <h2>Recent Orders</h2>
+                <div class="card p-0">
+                    <div class="list-group list-group-flush">
+                        <div class="list-group-item">
+                            <div>
+                                <div>
+                                    <h4>Order #3542</h4>
+                                    <p>John Doe - $234.00</p>
+                                </div>
+                                <button class="btn btn-secondary btn-sm">View</button>
+                            </div>
+                        </div>
+
+                        <div class="list-group-item">
+                            <div>
+                                <div>
+                                    <h4>Order #3541</h4>
+                                    <p>Jane Smith - $180.50</p>
+                                </div>
+                                <button class="btn btn-secondary btn-sm">View</button>
+                            </div>
+                        </div>
+
+                        <div class="list-group-item">
+                            <div>
+                                <div>
+                                    <h4>Order #3540</h4>
+                                    <p>Mike Johnson - $420.00</p>
+                                </div>
+                                <button class="btn btn-secondary btn-sm">View</button>
+                            </div>
+                        </div>
+
+                        <div class="list-group-item">
+                            <div>
+                                <div>
+                                    <h4>Order #3539</h4>
+                                    <p>Sarah Williams - $156.75</p>
+                                </div>
+                                <button class="btn btn-secondary btn-sm">View</button>
+                            </div>
+                        </div>
+
+                        <div class="list-group-item">
+                            <div>
+                                <div>
+                                    <h4>Order #3538</h4>
+                                    <p>Tom Brown - $89.99</p>
+                                </div>
+                                <button class="btn btn-secondary btn-sm">View</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actions Card -->
+            <div>
+                <h2>Quick Actions</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <p class="mb-6">Get started with your dashboard</p>
+                        <div class="flex gap-4">
+                            <button class="btn btn-primary">Create Product</button>
+                            <button class="btn btn-secondary">View Analytics</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Theme Controls -->
+    <div class="theme-controls">
+        <button class="theme-btn bg-theme-darkest text-theme-cream" onclick="toggleDarkMode()" title="Toggle Dark/Light Mode">
+            <span id="themeIcon">☀️</span>
+        </button>
+        <button class="theme-btn bg-theme-accent text-theme-darkest" onclick="cycleTheme()" title="Switch Theme">
+            🎨
+        </button>
+    </div>
+
+    <script>
+        // Toggle navbar on mobile
+        function toggleNavbar() {
+            const navbar = document.getElementById('navbarNav');
+            const toggler = document.querySelector('.navbar-toggler');
+            navbar.classList.toggle('show');
+            toggler.classList.toggle('active');
+        }
+
+        // Close navbar when clicking outside
+        document.addEventListener('click', function(event) {
+            const navbar = document.getElementById('navbarNav');
+            const toggler = document.querySelector('.navbar-toggler');
+            const navElement = document.querySelector('.navbar');
+            
+            if (!navElement.contains(event.target) && navbar.classList.contains('show')) {
+                navbar.classList.remove('show');
+                toggler.classList.remove('active');
+            }
+        });
+
+        // Toggle dark/light mode
+        function toggleDarkMode() {
+            const html = document.documentElement;
+            const icon = document.getElementById('themeIcon');
+            html.classList.toggle('dark');
+            
+            if (html.classList.contains('dark')) {
+                icon.textContent = '☀️';
+            } else {
+                icon.textContent = '🌙';
+            }
+        }
+
+        // Cycle through themes
+        const themes = ['shadcn', 'luxury', 'corporate'];
+        let currentThemeIndex = 0;
+
+        function cycleTheme() {
+            currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+            document.documentElement.setAttribute('data-color-theme', themes[currentThemeIndex]);
+        }
+
+        // Set initial icon based on dark mode
+        window.addEventListener('DOMContentLoaded', function() {
+            const html = document.documentElement;
+            const icon = document.getElementById('themeIcon');
+            if (html.classList.contains('dark')) {
+                icon.textContent = '☀️';
+            } else {
+                icon.textContent = '🌙';
+            }
+        });
+    </script>
+
+</body>
+</html>
+
