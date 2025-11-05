@@ -1,20 +1,24 @@
 /*!
  * Solanke Themes - Professional Color Themes Library
- * Version: 1.1.0
+ * Version: 1.2.0 (Universal Theme System)
  * Author: Saurabh Solanke
  * License: MIT
- * Description: A complete CSS framework with Luxury Green, Corporate Blue, and Shadcn-inspired themes
+ * Description: A complete CSS framework with universal theme system - just add colors!
+ * 
+ * ✨ NEW: Universal Theme System ✨
+ * Define any theme with just 12 color variables (6 for light, 6 for dark)
+ * Everything else adapts automatically - no CSS changes needed!
  * 
  * Features:
- * - Three professional color themes (Luxury Green, Corporate Blue, Shadcn Dark)
- * - Dark mode support
+ * - Universal theme system - add unlimited themes easily
+ * - Three professional themes included (Luxury Green, Corporate Blue, Shadcn)
+ * - Consistent brightness/intensity across ALL themes
+ * - Full dark mode support for every theme
  * - Complete layout system with sidebar & navbar
  * - Bootstrap-inspired components
- * - Typography utilities
- * - Rich animations
- * - Form components
- * - Responsive mobile menu
- * - Cards, Lists, Accordions
+ * - Typography utilities & animations
+ * - Form components & responsive design
+ * - Cards, Lists, Accordions & more
  * - No dependencies required
  * 
  * Usage:
@@ -24,12 +28,28 @@
  * 4. Add data-theme-enabled to <body> tag
  * 5. Use utility classes throughout your project
  * 
+ * Adding Custom Themes:
+ * Just define 6 variables for light mode + 6 for dark mode at the top of this file
+ * See the included themes as examples - it's that easy!
+ * 
  * CDN: https://cdn.jsdelivr.net/npm/solanke-themes@latest/solanke-themes.css
  */
 
 /* ========================================
    Theme Variables
    ======================================== */
+
+/* 
+ * THEME STRUCTURE:
+ * Each theme needs 6 color variables for light mode and 6 for dark mode
+ * 
+ * --theme-darkest: Darkest color (text in light mode, becomes lightest in dark mode)
+ * --theme-dark:    Dark color (secondary text)
+ * --theme-sage:    Medium color (interactive elements, accents)
+ * --theme-mint:    Light color (borders, subtle backgrounds)
+ * --theme-cream:   Lightest color (backgrounds in light mode, becomes darkest in dark mode)
+ * --theme-accent:  Accent color (highlights, focus states)
+ */
 
 :root {
   /* Default: Luxury Green Theme */
@@ -41,44 +61,76 @@
   --theme-accent: #6B8F71;
 }
 
-/* Luxury Green Theme */
+/* ============================================
+   LUXURY GREEN THEME
+   ============================================ */
+
+/* Luxury Green - Light Mode */
 :root[data-color-theme="luxury"] {
-  --theme-darkest: #0D2B1D;  /* Deep forest green */
-  --theme-dark: #345635;     /* Dark green */
-  --theme-sage: #6B8F71;     /* Sage green */
-  --theme-mint: #AEC3B0;     /* Mint green */
-  --theme-cream: #E3EFD3;    /* Light cream */
-  --theme-accent: #6B8F71;   /* Sage green accent */
+  --theme-darkest: #0D2B1D;  /* Deep forest green - Text */
+  --theme-dark: #345635;     /* Dark green - Secondary text */
+  --theme-sage: #6B8F71;     /* Sage green - Interactive elements */
+  --theme-mint: #AEC3B0;     /* Mint green - Borders/subtle */
+  --theme-cream: #E3EFD3;    /* Light cream - Background */
+  --theme-accent: #6B8F71;   /* Sage green - Accent */
 }
 
-/* Corporate Blue Theme */
+/* Luxury Green - Dark Mode */
+:root[data-color-theme="luxury"].dark {
+  --theme-darkest: #E3EFD3;  /* Light cream - Now text color */
+  --theme-dark: #0D2B1D;     /* Deep forest - Now dark background */
+  --theme-sage: #6B8F71;     /* Sage green - Stays for consistency */
+  --theme-mint: #345635;     /* Dark green - Now borders */
+  --theme-cream: #1a3a28;    /* Dark green surface - Card backgrounds */
+  --theme-accent: #8fae94;   /* Lighter sage - Better for dark mode */
+}
+
+/* ============================================
+   CORPORATE BLUE THEME
+   ============================================ */
+
+/* Corporate Blue - Light Mode */
 :root[data-color-theme="corporate"] {
-  --theme-darkest: #2E4053;  /* Deep blue-gray */
-  --theme-dark: #AAB7B8;     /* Steel gray */
-  --theme-sage: #BFC9CA;     /* Silver */
-  --theme-mint: #D5D8DC;     /* Cloud gray */
-  --theme-cream: #F8F9FA;    /* Light gray */
-  --theme-accent: #F1C40F;   /* Gold accent */
+  --theme-darkest: #1a2c42;  /* Deep navy blue - Text */
+  --theme-dark: #2d4a63;     /* Dark blue-gray - Secondary text */
+  --theme-sage: #5b7a94;     /* Steel blue - Interactive elements */
+  --theme-mint: #a3b8cc;     /* Light blue-gray - Borders/subtle */
+  --theme-cream: #e8f0f7;    /* Soft blue-white - Background */
+  --theme-accent: #3498db;   /* Bright blue - Accent */
 }
 
-/* Shadcn Dark Theme - Modern Black & White */
+/* Corporate Blue - Dark Mode */
+:root[data-color-theme="corporate"].dark {
+  --theme-darkest: #e8f0f7;  /* Soft blue-white - Now text color */
+  --theme-dark: #1a2c42;     /* Deep navy - Now dark background */
+  --theme-sage: #5b7a94;     /* Steel blue - Stays for consistency */
+  --theme-mint: #2d4a63;     /* Dark blue - Now borders */
+  --theme-cream: #233649;    /* Dark blue surface - Card backgrounds */
+  --theme-accent: #5dade2;   /* Lighter blue - Better for dark mode */
+}
+
+/* ============================================
+   SHADCN BLACK & WHITE THEME
+   ============================================ */
+
+/* Shadcn - Light Mode */
 :root[data-color-theme="shadcn"] {
-  --theme-darkest: #0a0a0a;  /* Almost black */
-  --theme-dark: #171717;     /* Dark gray (neutral-900) */
-  --theme-sage: #525252;     /* Medium gray (neutral-600) */
-  --theme-mint: #a3a3a3;     /* Light gray (neutral-400) */
-  --theme-cream: #fafafa;    /* Off white (neutral-50) */
-  --theme-accent: #f5f5f5;   /* White accent (neutral-100) */
+  --theme-darkest: #0a0a0a;  /* Almost black - Text */
+  --theme-dark: #171717;     /* Dark gray - Secondary text */
+  --theme-sage: #525252;     /* Medium gray - Interactive elements */
+  --theme-mint: #a3a3a3;     /* Light gray - Borders/subtle */
+  --theme-cream: #fafafa;    /* Off white - Background */
+  --theme-accent: #737373;   /* Mid gray - Accent */
 }
 
-/* Shadcn Dark Mode Enhancement */
+/* Shadcn - Dark Mode */
 :root[data-color-theme="shadcn"].dark {
-  --theme-darkest: #0a0a0a;  /* Pure black background */
-  --theme-dark: #171717;     /* Card/surface color */
-  --theme-sage: #737373;     /* Muted text (neutral-500) */
-  --theme-mint: #d4d4d4;     /* Secondary text (neutral-300) */
-  --theme-cream: #fafafa;    /* Primary text */
-  --theme-accent: #ffffff;   /* Accent white */
+  --theme-darkest: #fafafa;  /* Off white - Now text color */
+  --theme-dark: #0a0a0a;     /* Almost black - Now dark background */
+  --theme-sage: #737373;     /* Mid gray - Stays for consistency */
+  --theme-mint: #404040;     /* Dark gray - Now borders */
+  --theme-cream: #171717;    /* Dark surface - Card backgrounds */
+  --theme-accent: #a3a3a3;   /* Light gray - Better for dark mode */
 }
 
 /* ========================================
@@ -191,20 +243,20 @@ body[data-theme-enabled].dark {
    ======================================== */
 
 .gradient-theme-primary {
-  background: linear-gradient(135deg, var(--theme-darkest) 0%, var(--theme-sage) 50%, var(--theme-mint) 100%);
+  background: linear-gradient(180deg, var(--theme-darkest) 0%, var(--theme-sage) 50%, var(--theme-mint) 100%);
 }
 
 .gradient-theme-secondary {
-  background: linear-gradient(135deg, var(--theme-sage) 0%, var(--theme-mint) 100%);
+  background: linear-gradient(180deg, var(--theme-sage) 0%, var(--theme-mint) 100%);
 }
 
 .gradient-theme-accent {
-  background: linear-gradient(135deg, var(--theme-accent) 0%, var(--theme-sage) 100%);
+  background: linear-gradient(180deg, var(--theme-accent) 0%, var(--theme-sage) 100%);
 }
 
 /* Text gradients */
 .text-gradient-theme {
-  background: linear-gradient(135deg, var(--theme-darkest) 0%, var(--theme-sage) 50%, var(--theme-mint) 100%);
+  background: linear-gradient(180deg, var(--theme-darkest) 0%, var(--theme-sage) 50%, var(--theme-mint) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -272,7 +324,7 @@ body[data-theme-enabled].dark {
 
 /* Button Primary */
 .btn-primary {
-  background: linear-gradient(135deg, var(--theme-dark) 0%, var(--theme-sage) 100%);
+  background: linear-gradient(180deg, var(--theme-dark) 0%, var(--theme-sage) 100%);
   color: var(--theme-cream);
   border: none;
 }
@@ -294,13 +346,13 @@ body[data-theme-enabled].dark {
 }
 
 .dark .btn-secondary {
-  background-color: color-mix(in srgb, var(--theme-dark) 60%, transparent);
-  color: var(--theme-cream);
+  background-color: color-mix(in srgb, var(--theme-cream) 60%, transparent);
+  color: var(--theme-darkest);
   border-color: color-mix(in srgb, var(--theme-sage) 30%, transparent);
 }
 
 .dark .btn-secondary:hover {
-  background-color: color-mix(in srgb, var(--theme-dark) 80%, transparent);
+  background-color: color-mix(in srgb, var(--theme-cream) 80%, transparent);
 }
 
 /* Button Success */
@@ -375,7 +427,7 @@ body[data-theme-enabled].dark {
 
 /* Legacy Theme Buttons */
 .btn-theme-primary {
-  background: linear-gradient(135deg, var(--theme-dark) 0%, var(--theme-sage) 100%);
+  background: linear-gradient(180deg, var(--theme-dark) 0%, var(--theme-sage) 100%);
   color: var(--theme-cream);
   padding: 0.75rem 1.5rem;
   border-radius: 0.75rem;
@@ -519,21 +571,29 @@ body[data-theme-enabled].dark {
 
 .dark .card-header,
 .dark .card-footer {
-  background-color: color-mix(in srgb, var(--theme-darkest) 40%, transparent);
-  color: var(--theme-cream);
+  background-color: color-mix(in srgb, var(--theme-dark) 80%, transparent);
+  color: var(--theme-darkest);
 }
 
 .dark .card-header h3 {
-  color: var(--theme-cream);
+  color: var(--theme-darkest);
 }
 
 .dark .card-body p {
-  color: var(--theme-cream);
+  color: var(--theme-darkest);
   opacity: 0.9;
 }
 
 .dark .card-body strong {
-  color: var(--theme-cream);
+  color: var(--theme-darkest);
+}
+
+.dark .card-subtitle {
+  color: var(--theme-accent);
+}
+
+.dark .card-text {
+  color: var(--theme-darkest);
 }
 
 /* Card Title & Text */
@@ -545,7 +605,7 @@ body[data-theme-enabled].dark {
 }
 
 .dark .card-title {
-  color: var(--theme-cream);
+  color: var(--theme-darkest);
 }
 
 .card-subtitle {
@@ -743,8 +803,8 @@ body[data-theme-enabled].dark {
 }
 
 .dark .alert-theme-info {
-  background-color: color-mix(in srgb, var(--theme-dark) 40%, transparent);
-  color: var(--theme-cream);
+  background-color: color-mix(in srgb, var(--theme-cream) 40%, transparent);
+  color: var(--theme-darkest);
 }
 
 .alert-theme-success {
@@ -757,7 +817,7 @@ body[data-theme-enabled].dark {
 
 .dark .alert-theme-success {
   background-color: color-mix(in srgb, var(--theme-sage) 20%, transparent);
-  color: var(--theme-cream);
+  color: var(--theme-darkest);
 }
 
 .alert-theme-warning {
@@ -2280,7 +2340,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 }
 
 .gradient-theme-subtle {
-  background: linear-gradient(135deg, var(--theme-cream) 0%, var(--theme-mint) 100%);
+  background: linear-gradient(180deg, var(--theme-cream) 0%, var(--theme-mint) 100%);
 }
 
 .gradient-overlay {
@@ -2289,7 +2349,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 
 /* Text Gradient Variations */
 .text-gradient-accent {
-  background: linear-gradient(135deg, var(--theme-accent) 0%, var(--theme-sage) 100%);
+  background: linear-gradient(180deg, var(--theme-accent) 0%, var(--theme-sage) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -2342,7 +2402,11 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 }
 
 .dark .nav-link {
-  color: var(--theme-cream);
+  color: var(--theme-darkest);
+}
+
+.dark .nav-link.disabled {
+  color: var(--theme-sage);
 }
 
 /* Nav Tabs */
@@ -2418,7 +2482,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 }
 
 .dark .navbar-brand {
-  color: var(--theme-cream);
+  color: var(--theme-darkest);
 }
 
 /* Navbar Nav */
@@ -2631,7 +2695,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 }
 
 .dark .navbar-glass {
-  background-color: color-mix(in srgb, var(--theme-darkest) 60%, transparent);
+  background-color: color-mix(in srgb, var(--theme-dark) 60%, transparent);
   border-bottom-color: color-mix(in srgb, var(--theme-sage) 20%, transparent);
 }
 
@@ -2676,7 +2740,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 }
 
 .dark .header {
-  background: color-mix(in srgb, var(--theme-darkest) 80%, transparent);
+  background: color-mix(in srgb, var(--theme-dark) 80%, transparent);
   border-bottom-color: color-mix(in srgb, var(--theme-sage) 20%, transparent);
 }
 
@@ -2769,11 +2833,12 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 }
 
 .dark .dropdown-item {
-  color: var(--theme-cream);
+  color: var(--theme-darkest);
 }
 
 .dark .dropdown-item:hover {
   background-color: color-mix(in srgb, var(--theme-sage) 20%, transparent);
+  color: var(--theme-darkest);
 }
 
 /* Breadcrumb */
@@ -2820,11 +2885,19 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 }
 
 .dark .breadcrumb {
-  background-color: color-mix(in srgb, var(--theme-dark) 40%, transparent);
+  background-color: color-mix(in srgb, var(--theme-cream) 40%, transparent);
 }
 
 .dark .breadcrumb-item a {
-  color: var(--theme-mint);
+  color: var(--theme-accent);
+}
+
+.dark .breadcrumb-item + .breadcrumb-item::before {
+  color: var(--theme-sage);
+}
+
+.dark .breadcrumb-item.active {
+  color: var(--theme-darkest);
 }
 
 /* Pagination */
@@ -2871,8 +2944,12 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 }
 
 .dark .page-link {
-  color: var(--theme-mint);
+  color: var(--theme-accent);
   border-color: color-mix(in srgb, var(--theme-sage) 30%, transparent);
+}
+
+.dark .page-item.disabled .page-link {
+  color: var(--theme-sage);
 }
 
 /* Accordion */
@@ -2947,20 +3024,20 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 }
 
 .dark .accordion-item {
-  background-color: color-mix(in srgb, var(--theme-dark) 40%, transparent);
+  background-color: color-mix(in srgb, var(--theme-cream) 40%, transparent);
   border-color: color-mix(in srgb, var(--theme-sage) 30%, transparent);
 }
 
 .dark .accordion-button {
-  color: var(--theme-cream);
+  color: var(--theme-darkest);
 }
 
 .dark .accordion-button:not(.collapsed) {
-  color: var(--theme-mint);
+  color: var(--theme-accent);
 }
 
 .dark .accordion-body {
-  color: var(--theme-cream);
+  color: var(--theme-darkest);
 }
 
 /* ========================================
@@ -2989,8 +3066,8 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 }
 
 .dark .input-theme {
-  background-color: color-mix(in srgb, var(--theme-dark) 40%, transparent);
-  color: var(--theme-cream);
+  background-color: color-mix(in srgb, var(--theme-cream) 40%, transparent);
+  color: var(--theme-darkest);
   border-color: color-mix(in srgb, var(--theme-sage) 30%, transparent);
 }
 
@@ -3041,7 +3118,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 }
 
 .dark .label-theme {
-  color: var(--theme-cream);
+  color: var(--theme-darkest);
 }
 
 /* Checkbox & Radio */
@@ -3791,201 +3868,18 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 }
 
 /* ========================================
-   Shadcn Theme Specific Styles
+   Universal Theme System
    ======================================== */
 
-/* Shadcn Light Mode */
-:root[data-color-theme="shadcn"] body[data-theme-enabled] {
-  background-color: #ffffff;
-  color: var(--theme-darkest);
-}
-
-:root[data-color-theme="shadcn"] .card,
-:root[data-color-theme="shadcn"] .card-theme {
-  background-color: #ffffff;
-  border: 1px solid #e5e5e5;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  backdrop-filter: none;
-}
-
-:root[data-color-theme="shadcn"] .card-header {
-  background-color: transparent;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-:root[data-color-theme="shadcn"] .card-footer {
-  background-color: transparent;
-  border-top: 1px solid #e5e5e5;
-}
-
-:root[data-color-theme="shadcn"] .btn-primary {
-  background: #0a0a0a;
-  color: #fafafa;
-}
-
-:root[data-color-theme="shadcn"] .btn-primary:hover {
-  background: #171717;
-  box-shadow: none;
-}
-
-:root[data-color-theme="shadcn"] .btn-secondary {
-  background-color: #ffffff;
-  border: 1px solid #e5e5e5;
-  color: #0a0a0a;
-}
-
-:root[data-color-theme="shadcn"] .btn-secondary:hover {
-  background-color: #fafafa;
-  border-color: #d4d4d4;
-}
-
-:root[data-color-theme="shadcn"] .navbar-glass {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-bottom: 1px solid #e5e5e5;
-  backdrop-filter: blur(8px);
-}
-
-:root[data-color-theme="shadcn"] .sidebar {
-  background-color: #fafafa;
-  border-right: 1px solid #e5e5e5;
-}
-
-:root[data-color-theme="shadcn"] .list-group-item {
-  background-color: #ffffff;
-  border: 1px solid #e5e5e5;
-  border-bottom: none;
-}
-
-/* Shadcn Dark Mode */
-:root[data-color-theme="shadcn"].dark body[data-theme-enabled] {
-  background-color: #0a0a0a;
-  color: #fafafa;
-}
-
-:root[data-color-theme="shadcn"].dark .card,
-:root[data-color-theme="shadcn"].dark .card-theme {
-  background-color: #0a0a0a;
-  border: 1px solid #262626;
-  box-shadow: none;
-}
-
-:root[data-color-theme="shadcn"].dark .card:hover {
-  border-color: #404040;
-  box-shadow: none;
-  transform: translateY(-2px);
-}
-
-:root[data-color-theme="shadcn"].dark .card-header {
-  background-color: transparent;
-  border-bottom: 1px solid #262626;
-  color: #fafafa;
-}
-
-:root[data-color-theme="shadcn"].dark .card-footer {
-  background-color: transparent;
-  border-top: 1px solid #262626;
-}
-
-:root[data-color-theme="shadcn"].dark .btn-primary {
-  background: #fafafa;
-  color: #0a0a0a;
-}
-
-:root[data-color-theme="shadcn"].dark .btn-primary:hover {
-  background: #e5e5e5;
-  box-shadow: none;
-}
-
-:root[data-color-theme="shadcn"].dark .btn-secondary {
-  background-color: #171717;
-  border: 1px solid #262626;
-  color: #fafafa;
-}
-
-:root[data-color-theme="shadcn"].dark .btn-secondary:hover {
-  background-color: #262626;
-  border-color: #404040;
-}
-
-:root[data-color-theme="shadcn"].dark .navbar-glass {
-  background-color: rgba(10, 10, 10, 0.8);
-  border-bottom: 1px solid #262626;
-  backdrop-filter: blur(8px);
-}
-
-:root[data-color-theme="shadcn"].dark .sidebar {
-  background-color: #0a0a0a;
-  border-right: 1px solid #262626;
-}
-
-:root[data-color-theme="shadcn"].dark .list-group-item {
-  background-color: #0a0a0a;
-  border: 1px solid #262626;
-  border-bottom: none;
-}
-
-:root[data-color-theme="shadcn"].dark .list-group-item:hover {
-  background-color: #171717;
-}
-
-:root[data-color-theme="shadcn"].dark .input-theme,
-:root[data-color-theme="shadcn"].dark .textarea-theme,
-:root[data-color-theme="shadcn"].dark .select-theme {
-  background-color: #0a0a0a;
-  border: 1px solid #262626;
-  color: #fafafa;
-}
-
-:root[data-color-theme="shadcn"].dark .input-theme:focus,
-:root[data-color-theme="shadcn"].dark .textarea-theme:focus,
-:root[data-color-theme="shadcn"].dark .select-theme:focus {
-  border-color: #fafafa;
-  box-shadow: 0 0 0 1px #fafafa;
-}
-
-:root[data-color-theme="shadcn"].dark .navbar-brand {
-  color: #fafafa;
-}
-
-:root[data-color-theme="shadcn"].dark .nav-link {
-  color: #a3a3a3;
-}
-
-:root[data-color-theme="shadcn"].dark .nav-link:hover {
-  color: #fafafa;
-  background-color: #171717;
-}
-
-:root[data-color-theme="shadcn"].dark .nav-link.active {
-  color: #fafafa;
-  background-color: #171717;
-}
-
-:root[data-color-theme="shadcn"].dark .accordion-item {
-  background-color: #0a0a0a;
-  border: 1px solid #262626;
-}
-
-:root[data-color-theme="shadcn"].dark .accordion-button {
-  color: #fafafa;
-  background-color: transparent;
-}
-
-:root[data-color-theme="shadcn"].dark .accordion-button:not(.collapsed) {
-  background-color: #171717;
-  color: #fafafa;
-}
-
-/* Remove glass effects for shadcn theme */
-:root[data-color-theme="shadcn"] .glass-theme {
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-}
-
-:root[data-color-theme="shadcn"].dark .glass-theme {
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-}
+/* 
+ * All themes now use the same CSS variables system.
+ * No theme-specific overrides needed!
+ * 
+ * To add a new theme:
+ * 1. Define 6 variables for light mode
+ * 2. Define 6 variables for dark mode
+ * 3. Everything else works automatically!
+ */
 
 /* ========================================
    Dark Mode Enhancements
@@ -3996,97 +3890,98 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 }
 
 .dark body[data-theme-enabled] {
-  background-color: var(--theme-darkest);
-  color: var(--theme-cream);
+  background-color: var(--theme-dark);
+  color: var(--theme-darkest);
 }
 
 .dark .bg-theme-cream {
-  background-color: var(--theme-darkest) !important;
+  background-color: var(--theme-cream) !important;
 }
 
 .dark .text-theme-darkest {
-  color: var(--theme-cream) !important;
+  color: var(--theme-darkest) !important;
 }
 
 .dark .text-theme-dark {
-  color: var(--theme-cream) !important;
+  color: var(--theme-darkest) !important;
   opacity: 0.9;
 }
 
 .dark .text-theme-dark-80 {
-  color: var(--theme-cream) !important;
+  color: var(--theme-darkest) !important;
   opacity: 0.8;
 }
 
 .dark .text-theme-dark-60 {
-  color: var(--theme-cream) !important;
+  color: var(--theme-darkest) !important;
   opacity: 0.7;
 }
 
 .dark .text-theme-sage {
-  color: var(--theme-mint) !important;
+  color: var(--theme-sage) !important;
 }
 
 .dark .text-theme-sage-80 {
-  color: var(--theme-mint) !important;
+  color: var(--theme-sage) !important;
   opacity: 0.9;
 }
 
 .dark .text-theme-mint {
-  color: var(--theme-cream) !important;
+  color: var(--theme-accent) !important;
   opacity: 0.95;
 }
 
 .dark .text-theme-mint-80 {
-  color: var(--theme-cream) !important;
+  color: var(--theme-accent) !important;
   opacity: 0.85;
 }
 
 .dark .text-theme-mint-60 {
-  color: var(--theme-cream) !important;
+  color: var(--theme-accent) !important;
   opacity: 0.75;
 }
 
 .dark .border-theme-cream {
-  border-color: var(--theme-darkest) !important;
+  border-color: var(--theme-mint) !important;
 }
 
 /* Dark mode badge improvements */
 .dark .badge-theme-secondary {
   background-color: color-mix(in srgb, var(--theme-sage) 40%, transparent);
-  color: var(--theme-cream);
+  color: var(--theme-darkest);
   border-color: color-mix(in srgb, var(--theme-sage) 40%, transparent);
 }
 
 /* Dark mode code block improvements */
 .dark .code-inline {
   background: color-mix(in srgb, var(--theme-sage) 30%, transparent);
-  color: var(--theme-cream);
+  color: var(--theme-darkest);
 }
 
 /* Dark mode heading improvements */
 .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
-  color: var(--theme-cream);
+  color: var(--theme-darkest);
 }
 
 /* Dark mode link improvements */
 .dark .link-theme {
-  color: var(--theme-mint);
+  color: var(--theme-accent);
 }
 
 .dark .link-theme:hover {
-  color: var(--theme-cream);
+  color: var(--theme-darkest);
 }
 
 /* Dark mode nav improvements */
 .dark .nav-links a {
-  color: var(--theme-cream);
+  color: var(--theme-darkest);
   opacity: 0.9;
 }
 
 .dark .nav-links a:hover {
   opacity: 1;
   background-color: color-mix(in srgb, var(--theme-sage) 20%, transparent);
+  color: var(--theme-darkest);
 }
 
 /* ========================================
@@ -4230,14 +4125,18 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 }
 
 .dark .list-group-item {
-  color: var(--theme-cream);
-  background-color: color-mix(in srgb, var(--theme-dark) 40%, transparent);
+  color: var(--theme-darkest);
+  background-color: color-mix(in srgb, var(--theme-cream) 40%, transparent);
   border-color: color-mix(in srgb, var(--theme-sage) 30%, transparent);
 }
 
 .dark .list-group-item p {
-  color: var(--theme-cream);
+  color: var(--theme-darkest);
   opacity: 0.8;
+}
+
+.dark .list-group-item.disabled {
+  color: var(--theme-sage);
 }
 
 /* List Group Flush */
@@ -4312,21 +4211,21 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 }
 
 .dark .sidebar {
-  background-color: color-mix(in srgb, var(--theme-darkest) 90%, transparent);
+  background-color: color-mix(in srgb, var(--theme-dark) 90%, transparent);
   border-right-color: color-mix(in srgb, var(--theme-sage) 30%, transparent);
 }
 
 .dark .sidebar h2 {
-  color: var(--theme-cream);
+  color: var(--theme-darkest);
 }
 
 .dark .sidebar ul li a {
-  color: var(--theme-cream);
+  color: var(--theme-darkest);
 }
 
 .dark .sidebar ul li a:hover {
   background-color: color-mix(in srgb, var(--theme-sage) 20%, transparent);
-  color: var(--theme-cream);
+  color: var(--theme-darkest);
 }
 
 /* Main Content with Sidebar Layout */
@@ -4353,7 +4252,7 @@ main h2 {
 
 .dark main h1,
 .dark main h2 {
-  color: var(--theme-cream);
+  color: var(--theme-darkest);
 }
 
 /* Card Flex Layout */
@@ -4460,16 +4359,16 @@ main > div:first-of-type > .card {
 }
 
 .dark .toast {
-  background-color: color-mix(in srgb, var(--theme-dark) 95%, transparent);
+  background-color: color-mix(in srgb, var(--theme-cream) 95%, transparent);
   border-color: color-mix(in srgb, var(--theme-sage) 30%, transparent);
 }
 
 .dark .toast-header {
-  color: var(--theme-cream);
+  color: var(--theme-darkest);
 }
 
 .dark .toast-body {
-  color: var(--theme-cream);
+  color: var(--theme-darkest);
 }
 
 /* ========================================
@@ -4543,12 +4442,12 @@ main > div:first-of-type > .card {
 }
 
 .dark .offcanvas {
-  background-color: color-mix(in srgb, var(--theme-darkest) 95%, transparent);
+  background-color: color-mix(in srgb, var(--theme-dark) 95%, transparent);
   border-color: color-mix(in srgb, var(--theme-sage) 30%, transparent);
 }
 
 .dark .offcanvas-title {
-  color: var(--theme-cream);
+  color: var(--theme-darkest);
 }
 
 /* Offcanvas Backdrop */
@@ -4618,7 +4517,7 @@ main > div:first-of-type > .card {
 }
 
 .dark .docs-navbar {
-  background-color: color-mix(in srgb, var(--theme-darkest) 90%, transparent);
+  background-color: color-mix(in srgb, var(--theme-dark) 90%, transparent);
 }
 
 /* Documentation Sidebar */
@@ -4636,7 +4535,16 @@ main > div:first-of-type > .card {
 }
 
 .dark .docs-sidebar {
-  background-color: var(--theme-darkest);
+  background-color: var(--theme-dark);
+}
+
+.dark .docs-sidebar a {
+  color: var(--theme-darkest);
+}
+
+.dark .docs-sidebar a:hover {
+  background-color: color-mix(in srgb, var(--theme-sage) 20%, transparent);
+  color: var(--theme-accent);
 }
 
 .docs-sidebar a {
@@ -4721,6 +4629,10 @@ main > div:first-of-type > .card {
   margin: 0.25rem 0 0 0;
 }
 
+.dark .class-desc {
+  color: var(--theme-accent);
+}
+
 .example-box {
   border: 2px dashed color-mix(in srgb, var(--theme-mint) 40%, transparent);
   padding: 1rem;
@@ -4746,10 +4658,37 @@ main > div:first-of-type > .card {
 
 /* Thank you for using Solanke Themes! 
  * 
- * Three Beautiful Themes:
- * - Luxury Green: Natural, elegant design
- * - Corporate Blue: Professional, business-ready
- * - Shadcn Dark: Modern, minimal black & white
+ * ✨ UNIVERSAL THEME SYSTEM ✨
+ * 
+ * Three Beautiful Themes Included:
+ * - Luxury Green: Natural, elegant design with forest tones
+ * - Corporate Blue: Professional, business-ready blue palette
+ * - Shadcn: Modern, minimal black & white aesthetics
+ * 
+ * 🎨 ADD YOUR OWN THEME:
+ * Just define 6 color variables for light mode and 6 for dark mode
+ * at the top of this file - everything else works automatically!
+ * 
+ * Example:
+ * :root[data-color-theme="mytheme"] {
+ *   --theme-darkest: #your-darkest-color;
+ *   --theme-dark: #your-dark-color;
+ *   --theme-sage: #your-medium-color;
+ *   --theme-mint: #your-light-color;
+ *   --theme-cream: #your-lightest-color;
+ *   --theme-accent: #your-accent-color;
+ * }
+ * 
+ * :root[data-color-theme="mytheme"].dark {
+ *   --theme-darkest: #inverted-for-dark-mode;
+ *   --theme-dark: #inverted-for-dark-mode;
+ *   --theme-sage: #adjusted-for-dark-mode;
+ *   --theme-mint: #adjusted-for-dark-mode;
+ *   --theme-cream: #inverted-for-dark-mode;
+ *   --theme-accent: #adjusted-for-dark-mode;
+ * }
+ * 
+ * Then use: <html data-color-theme="mytheme">
  * 
  * Built with ❤️ by Saurabh Solanke
  */
